@@ -1,0 +1,1 @@
+Search.setIndex({objects:{},terms:{analysi:0,life:0,cathod:0,span:0,optic:0,chronolog:0,tool:0,site:0,soon:0,high:0,host:0,growth:0,throughput:0,densiti:0,experi:0,document:0,gathod:0},objtypes:{},titles:["Growth Analysis Tool (GATHODE) and CLS Analysis Tool (CATHODE)"],objnames:{},filenames:["index"]})
