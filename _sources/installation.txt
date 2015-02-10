@@ -1,0 +1,107 @@
+..
+   Local Variables:
+   ispell-local-dictionary: "en_GB"
+   End:
+
+.. _installation:
+
+Installing GATHODE and CATHODE from source
+******************************************
+
+Dependencies
+============
+
+To install GATHODE and CATHODE from source, you will need to install
+its dependencies. These are
+
+* `Python <https://www.python.org/>`_
+* `Numpy <http://www.numpy.org/>`_
+* `SciPy <https://www.scipy.org/>`_
+* `PyQt <http://www.riverbankcomputing.co.uk/software/pyqt>`_
+
+You also need to install the `pip <https://pip.pypa.io/en/latest/>`_
+Python package installer (often included in a Python distribution)
+unless you are a proficient Python developer.
+
+
+Linux
+-----
+
+On Debian (version 7 ``wheezy`` and 8 ``jessie``) and Ubuntu (version
+12.04 and 14.04), install the dependencies with the following command
+(being root or using ``sudo``)
+
+::
+
+    apt-get install python-qt4 python-sip python-scipy python-matplotlib python-pip 
+
+On Fedora (release ``heisenbug``), install the dependencies like this
+
+::
+
+    yum -y install python-pip PyQt4 sip scipy python-matplotlib-qt4
+
+Then you should be able to install the python package with
+
+::
+
+    pip install https://github.com/platereader/gathode/archive/master.zip
+
+If you don't have root permissions, follow the instructions below
+using a :ref:`virtual environment <virtualenvironment>`.
+
+
+OS X
+----
+
+One option to install Python and all the required dependencies is to
+use `MacPorts <https://www.macports.org/>`_. Install it and run
+
+::
+
+    port install py27-pyqt4-devel py27-matplotlib py27-scipy
+
+and then
+
+::
+
+    pip install https://github.com/platereader/gathode/archive/master.zip
+
+
+Windows
+-------
+
+`Python(x,y) <https://code.google.com/p/pythonxy>`_ includes all the
+required dependencies. Install it and run from Command Prompt
+(cmd.exe)
+
+::
+
+    pip install https://github.com/platereader/gathode/archive/master.zip
+
+
+.. _virtualenvironment:
+
+Virtual environments
+====================
+
+If you would like to use a `virtual environment
+<http://virtualenv.readthedocs.org/>`_ to isolate this software's
+dependencies, you will still need to install Python and PyQt
+(including sip), see above. Then set up the virtual environment with
+
+::
+
+    virtualenv ATHODEs
+    source ATHODEs/bin/activate
+
+PyQt, the graphical user interface library used by this program, can
+not be installed with standard Python tools. To install it in your
+virtual environment, follow e.g. `this
+<http://stackoverflow.com/a/9716100>`_ procedure.
+
+Then you should be able to install the gathode package with
+
+::
+
+    pip install https://github.com/platereader/gathode/archive/master.zip

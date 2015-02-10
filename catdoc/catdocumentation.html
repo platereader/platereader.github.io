@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>CATHODE Documentation &mdash; GATHODE | CATHODE  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="GATHODE | CATHODE  documentation" href="../index.html" />
+    <link rel="next" title="Installing GATHODE and CATHODE from source" href="../installation.html" />
+    <link rel="prev" title="Parameters" href="../gatdoc/gatparameters.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          GATHODE | CATHODE</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../gatdoc/gatdocumentation.html">GATHODE Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">CATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installing GATHODE and CATHODE from source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Documentation</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">CATHODE Documentation</a><ul>
+<li><a class="reference internal" href="#getting-started">Getting started</a><ul>
+<li><a class="reference internal" href="#plan-run-and-export-plate-reader-experiment">Plan, run and export plate reader experiment</a></li>
+<li><a class="reference internal" href="#analyse-the-data">Analyse the data</a></li>
+<li><a class="reference internal" href="#save-load-and-reload-cls-data">Save, load and reload  CLS data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../gatdoc/gatparameters.html" title="Previous Chapter: Parameters"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Parameters</span>
+    </a>
+  </li>
+  <li>
+    <a href="../installation.html" title="Next Chapter: Installing GATHODE and CATHODE from source"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Installing GATHO... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="cathode-documentation">
+<h1>CATHODE Documentation<a class="headerlink" href="#cathode-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="getting-started">
+<span id="catgettingstarted"></span><h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>In this tutorial we describe how to get started with the Chronological
+life span Analysis Tool for High-throughput Optical Density
+Experiments (CATHODE). Make sure you have first read the
+<a class="reference internal" href="../gatdoc/gatgettingstarted.html#gatgettingstarted"><em>Getting started chapter of GATHODE</em></a>.</p>
+<div class="section" id="plan-run-and-export-plate-reader-experiment">
+<h3>Plan, run and export plate reader experiment<a class="headerlink" href="#plan-run-and-export-plate-reader-experiment" title="Permalink to this headline">¶</a></h3>
+<p>When performing a chronological life span analysis, each plate
+corresponds to one <tt class="docutils literal"><span class="pre">age-point</span></tt>, and all plates must have exactly the
+same layout of samples/conditions per well.</p>
+</div>
+<div class="section" id="analyse-the-data">
+<h3>Analyse the data<a class="headerlink" href="#analyse-the-data" title="Permalink to this headline">¶</a></h3>
+<p>After finishing all your experiment with the plate reader, process
+every plate as explained in the <a class="reference internal" href="../gatdoc/gatgettingstarted.html#gatgettingstarted"><em>GATHODE documentation</em></a>.</p>
+<p>Once this is done, the files saved by GATHODE are ready for import
+into CATHODE. Create a new project by choosing <em class="menuselection">File
+‣ New</em>. A selection window will pop up that allows to select the
+files and assign an age-point to them.</p>
+<a class="reference internal image-reference" href="../_images/catnew.png"><img alt="Creating a new CLS project" src="../_images/catnew.png" style="width: 481.6px; height: 202.4px;" /></a>
+<p>When the files are imported, you will see the list of samples that you
+are already familiar with from GATHODE, and the main figure will show
+the viability graph.</p>
+<a class="reference internal image-reference" href="../_images/catproject.png"><img alt="Loaded CATHODE project" src="../_images/catproject.png" style="width: 643.0px; height: 393.0px;" /></a>
+<p>As with GATHODE, you can save the figures in PDF format
+(<em class="menuselection">File ‣ Export figure</em>) and a table in CSV
+(comma-separated values) format including the viabilities and the
+survival integral (<em class="menuselection">File ‣ Export properties</em>).</p>
+</div>
+<div class="section" id="save-load-and-reload-cls-data">
+<h3>Save, load and reload  CLS data<a class="headerlink" href="#save-load-and-reload-cls-data" title="Permalink to this headline">¶</a></h3>
+<p>You can save the CLS data from the menu by choosing
+<em class="menuselection">File ‣ Save as</em>. Note though that the GATHODE
+plate files themselves are not included in the saved file, only their
+locations are stored. You should therefore not move the GATHODE files
+to another directory, as CLS will then not be able to locate them. But
+you can move the CLS file together with the accompanying GATHODE files
+to another directory, as long as the relative positions in the
+directory tree stay the same.</p>
+<p>You may change the underlying GATHODE files of a CLS analysis and then
+reload these by selecting <em class="menuselection">File ‣ Reload</em>.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014-2015, Nils Christian.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

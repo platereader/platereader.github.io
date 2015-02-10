@@ -31,6 +31,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="top" title="GATHODE | CATHODE  documentation" href="#" />
+    <link rel="next" title="GATHODE Documentation" href="gatdoc/gatdocumentation.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -66,12 +67,42 @@
      href="#">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="simple">
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="gatdoc/gatdocumentation.html">GATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catdoc/catdocumentation.html">CATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installing GATHODE and CATHODE from source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Growth Analysis Tool (GATHODE) and CLS Analysis Tool (CATHODE)</a></li>
+<li><a class="reference internal" href="#license-and-citation">License and citation</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#download">Download</a></li>
+<li><a class="reference internal" href="#developing">Developing</a></li>
 </ul>
 </ul>
 </li>
               
             
+            
+              
+                
+  <li>
+    <a href="gatdoc/gatdocumentation.html" title="Next Chapter: GATHODE Documentation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">GATHODE Document... &raquo;</span>
+    </a>
+  </li>
+              
             
             
             
@@ -80,6 +111,13 @@
 
           
             
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
           
         </div>
     </div>
@@ -93,12 +131,53 @@
 </div>
 <div class="section" id="growth-analysis-tool-gathode-and-cls-analysis-tool-cathode">
 <h1>Growth Analysis Tool (GATHODE) and CLS Analysis Tool (CATHODE)<a class="headerlink" href="#growth-analysis-tool-gathode-and-cls-analysis-tool-cathode" title="Permalink to this headline">¶</a></h1>
-<p>The site will soon host the documentation Growth Analysis Tool for
-High-throughput Optical Density Experiments (GATHODE) and
-Chronological life span Analysis Tool for High-throughput Optical
-Density Experiments (CATHODE).</p>
-<p>For now you can browse the source code at
+<p>The Growth Analysis Tool for High-throughput Optical Density
+Experiments (GATHODE) is a software package for analysing time series
+of optical density measurements that were recorded with the help of a
+<a class="reference external" href="http://en.wikipedia.org/wiki/Plate_reader">plate reader</a>. It allows
+to extract growth parameters such as maximal growth rate, lag-time and
+growth yield.</p>
+<p>The Chronological Life Span is defined as the time cells can survive
+in a non-dividing state. The Chronological life span Analysis Tool for
+High-throughput Optical Density Experiments (CATHODE) uses multiple
+output files of GATHODE to analyse this survival.</p>
+<p>Both programs consist of the main analysis logic suitable for batch
+processing, and a graphical user interface (GUI) that allows for quick
+inspection of curves, adjustment of parameters and blacklisting of
+outliers. They allow to export the data as figures or tables for
+further processing and analysis.</p>
+<a class="reference internal image-reference" href="_images/gatteaser.png"><img alt="Screenshot of GATHODE" src="_images/gatteaser.png" style="width: 475.82px; height: 290.82px;" /></a>
+<a class="reference internal image-reference" href="_images/catproject.png"><img alt="Screenshot of CATHODE" src="_images/catproject.png" style="width: 475.82px; height: 290.82px;" /></a>
+</div>
+<div class="section" id="license-and-citation">
+<h1>License and citation<a class="headerlink" href="#license-and-citation" title="Permalink to this headline">¶</a></h1>
+<p>Growth Analysis Tool for High-throughput Optical Density Experiments
+(GATHODE) and Chronological life span Analysis Tool for
+High-throughput Optical Density Experiments (CATHODE) are released
+under the terms of the <a class="reference external" href="_static/LICENSE">GNU Affero General Public License</a>.</p>
+<p>If you use (parts of) this software in your research, we kindly ask
+you to cite our publication <em>Jung P. P., Christian N., Kay D.,
+Skupin A. and Linster C.L. 2015. Protocols and programs for
+high-throughput growth and aging phenotyping in yeast. Accepted,
+doi:10.1371/journal.pone.0119807</em></p>
+</div>
+<div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<p>To get started with GATHODE read <a class="reference internal" href="gatdoc/gatgettingstarted.html#gatgettingstarted"><em>getting started</em></a> of the <a class="reference internal" href="gatdoc/gatdocumentation.html"><em>documentation</em></a>.</p>
+<p>CATHODE is documented <a class="reference internal" href="catdoc/catdocumentation.html"><em>here</em></a>.</p>
+</div>
+<div class="section" id="download">
+<h1>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
+<p>The latest versions of GATHODE and CATHODE for Mac OS/X and Windows
+will soon be made available for download.</p>
+<p>To install the software from source check the <a class="reference internal" href="installation.html"><em>installation
+instructions</em></a>. The source code is hosted at
 <a class="reference external" href="https://github.com/platereader/gathode">https://github.com/platereader/gathode</a>.</p>
+</div>
+<div class="section" id="developing">
+<h1>Developing<a class="headerlink" href="#developing" title="Permalink to this headline">¶</a></h1>
+<p>If you would like to extend the software or use it in your custom
+workflow, read the <a class="reference internal" href="api.html"><em>developer documentation</em></a>.</p>
 </div>
 
 
@@ -113,7 +192,7 @@ Density Experiments (CATHODE).</p>
       
     </p>
     <p>
-        &copy; Copyright 2015, Nils Christian.<br/>
+        &copy; Copyright 2014-2015, Nils Christian.<br/>
     </p>
   </div>
 </footer>

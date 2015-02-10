@@ -1,0 +1,13 @@
+..
+   Local Variables:
+   ispell-local-dictionary: "en_GB"
+   End:
+
+GATHODE Documentation
+*********************
+
+.. toctree::
+
+   gatgettingstarted
+   gatmath
+   gatparameters

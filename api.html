@@ -1,0 +1,2007 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API Documentation &mdash; GATHODE | CATHODE  documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GATHODE | CATHODE  documentation" href="index.html" />
+    <link rel="prev" title="Installing GATHODE and CATHODE from source" href="installation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          GATHODE | CATHODE</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gatdoc/gatdocumentation.html">GATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catdoc/catdocumentation.html">CATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installing GATHODE and CATHODE from source</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">API Documentation</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">API Documentation</a><ul>
+<li><a class="reference internal" href="#gathode">GATHODE</a></li>
+<li><a class="reference internal" href="#cathode">CATHODE</a></li>
+<li><a class="reference internal" href="#statusmessage">StatusMessage</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="installation.html" title="Previous Chapter: Installing GATHODE and CATHODE from source"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Installing GATHO...</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="api-documentation">
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="gathode">
+<h2>GATHODE<a class="headerlink" href="#gathode" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="platereader.plate.Plate">
+<em class="property">class </em><tt class="descclassname">platereader.plate.</tt><tt class="descname">Plate</tt><big>(</big><em>filename=None</em>, <em>fileformat=None</em>, <em>time=None</em>, <em>rawOds=None</em>, <em>sampleIds=None</em>, <em>conditions=None</em>, <em>wellids=None</em>, <em>plateId=None</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Class containing the wells and holding plate-wide parameters.</p>
+<p>Constructor.</p>
+<p>If filename is not None and fileformat is None some heuristics
+are used to identify the file format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<em>str</em>) &#8211; name of serialised Plate or ascii file exported by the plate reader.</li>
+<li><strong>fileformat</strong> (<em>str</em>) &#8211; string indicating the format (&#8216;gat&#8217;, &#8216;tecan&#8217;)</li>
+<li><strong>time</strong> (<em>numpy.array(float)</em>) &#8211; array of timepoints when optical density was measured</li>
+<li><strong>rawOds</strong> (<em>list( numpy.array(float) )</em>) &#8211; list of optical density arrays</li>
+<li><strong>sampleIds</strong> (<em>list(str)</em>) &#8211; list of sample names corresponding to the array of optical densities</li>
+<li><strong>conditions</strong> (<em>list(str)</em>) &#8211; list of conditions under which the samples where grown</li>
+<li><strong>plateId</strong> (<em>str</em>) &#8211; name of this plate</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="platereader.plate.Plate.save">
+<tt class="descname">save</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the plate content in a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<em>str</em>) &#8211; Name of the file.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">StatusMessage/None &#8211; non-fatal notifications.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="platereader.plate.Plate.capitaliseId">
+<em class="property">static </em><tt class="descname">capitaliseId</tt><big>(</big><em>sampleId</em>, <em>capitaliseThese</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.capitaliseId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Capitalise id if in given list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sampleId</strong> (<em>str</em>) &#8211; sample id; if this matches capitaliseThese it will be capitalised</li>
+<li><strong>capitaliseThese</strong> (<em>list(str)</em>) &#8211; list of sample ids that correspond to samples that should be capitalised</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">str &#8211; sample id (capitalised if it matches one of capitaliseThese)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.wellMetadataOk">
+<tt class="descname">wellMetadataOk</tt><big>(</big><em>metadata</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.wellMetadataOk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check that the given metadata (i.e. sample id, growth condition) is valid and can be applied.</p>
+<p>This basically checks that there is the right amount of
+metadata entries and these contain sample ids and conditions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>metadata</strong> (<em>list(dict)</em>) &#8211; array of metadata dictionaries</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool, StatusMessage &#8211; True if ok, False otherwise (and a StatusMessage with details)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setWellMetadata">
+<tt class="descname">setWellMetadata</tt><big>(</big><em>metadata</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setWellMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the metadata (e.g. sample id, growth condition) of the wells.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>metadata</strong> (<em>list(dict)</em>) &#8211; array of metadata dictionaries</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.wellMetadata">
+<tt class="descname">wellMetadata</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.plate.Plate.wellMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the metadata of the wells.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(dict) &#8211; metadata</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.backgroundReplicateGroupIndices">
+<tt class="descname">backgroundReplicateGroupIndices</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.plate.Plate.backgroundReplicateGroupIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return indices into self.replicateGroups for replicate groups being listed as background.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(int) &#8211; indices of background replicate groups</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.backgroundReplicateGroups">
+<tt class="descname">backgroundReplicateGroups</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.plate.Plate.backgroundReplicateGroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return replicate groups being listed as background.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate) &#8211; replicate groups listed as background</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.backgroundWellIndices">
+<tt class="descname">backgroundWellIndices</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.plate.Plate.backgroundWellIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return indices into self.wells for wells being listed as background.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(int) &#8211; indices of background wells</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.backgroundWells">
+<tt class="descname">backgroundWells</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.plate.Plate.backgroundWells" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return wells being listed as background.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate) &#8211; wells listed as background</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.replicateGroupIdxForSampleCondition">
+<tt class="descname">replicateGroupIdxForSampleCondition</tt><big>(</big><em>sampleid</em>, <em>condition</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.replicateGroupIdxForSampleCondition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return index of replicate group with the given sample Id and condition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sampleid</strong> (<em>string</em>) &#8211; Id of the sample.</li>
+<li><strong>condition</strong> (<em>string</em>) &#8211; Condition under which the sample was grown.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">int &#8211; Index (into self.replicateGroups) of Replicate with given id and condition.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.replicateGroupForSampleCondition">
+<tt class="descname">replicateGroupForSampleCondition</tt><big>(</big><em>sampleid</em>, <em>condition</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.replicateGroupForSampleCondition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return index of replicate group with the given sample Id and condition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sampleid</strong> (<em>string</em>) &#8211; Id of the sample.</li>
+<li><strong>condition</strong> (<em>string</em>) &#8211; Condition under which the sample was grown.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Replicate &#8211; replicate group with given id and condition.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.replicateGroupIdcsForCondition">
+<tt class="descname">replicateGroupIdcsForCondition</tt><big>(</big><em>condition</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.replicateGroupIdcsForCondition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of indices of replicate groups with the given condition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>condition</strong> (<em>string</em>) &#8211; Condition under which the samples were grown.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list(int) &#8211; Indices (into self.replicateGroups) of replicate groups with the given condition.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.replicateGroupsForCondition">
+<tt class="descname">replicateGroupsForCondition</tt><big>(</big><em>condition</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.replicateGroupsForCondition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of replicate groups with the given condition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>condition</strong> (<em>string</em>) &#8211; Condition under which the samples were grown.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate) &#8211; Replicate groups with given condition.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.conditions">
+<tt class="descname">conditions</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.plate.Plate.conditions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of conditions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(str) &#8211; Conditions.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.nonBackgroundReplicates">
+<tt class="descname">nonBackgroundReplicates</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.plate.Plate.nonBackgroundReplicates" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate) &#8211; replicate groups that are not background samples.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.nonBackgroundReplicateIndices">
+<tt class="descname">nonBackgroundReplicateIndices</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.plate.Plate.nonBackgroundReplicateIndices" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate) &#8211; Indices of replicate groups that are not background samples.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.nonBackgroundWells">
+<tt class="descname">nonBackgroundWells</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.plate.Plate.nonBackgroundWells" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate) &#8211; wells that are not background samples.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.getParameter">
+<tt class="descname">getParameter</tt><big>(</big><em>par</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.getParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the requested parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>par</strong> (<em>str</em>) &#8211; The name of the parameter.</td>
+</tr>
+</tbody>
+</table>
+<p>If the parameter is explicitly set for the plate, this value
+returned. Otherwise return None.</p>
+<p>See chapter <a class="reference internal" href="gatdoc/gatparameters.html#gat-parameters"><em>parameters</em></a> for details of
+parameter handling and available parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.parameterIsEditible">
+<tt class="descname">parameterIsEditible</tt><big>(</big><em>par</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.parameterIsEditible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if this is a parameter can have a plate-wide default.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool &#8211; True if parameter can be edited.</td>
+</tr>
+</tbody>
+</table>
+<p>Some parameters can only be changed per Replicate, some only
+per Plate. This method is used to distinguish between them.</p>
+<p>See chapter <a class="reference internal" href="gatdoc/gatparameters.html#gat-parameters"><em>parameters</em></a> for details of
+parameter handling and available parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.parameterIsExplicitlySet">
+<tt class="descname">parameterIsExplicitlySet</tt><big>(</big><em>par</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.parameterIsExplicitlySet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if this is parameter is explicitly set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>par</strong> (<em>str</em>) &#8211; The name of the parameter.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool &#8211; True if parameter is explicitly set.</td>
+</tr>
+</tbody>
+</table>
+<p>If a parameter is explicitly set for a replicate it overrides
+an inherited value. This method is used to tell whether this
+is the case. Since this object is a plate it tells whether a
+default value has been set.</p>
+<p>See chapter <a class="reference internal" href="gatdoc/gatparameters.html#gat-parameters"><em>parameters</em></a> for details of
+parameter handling and available parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.activeChildReplicatesHaveExplicitParameter">
+<tt class="descname">activeChildReplicatesHaveExplicitParameter</tt><big>(</big><em>par</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.activeChildReplicatesHaveExplicitParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if for at least one of the replicate groups the given parameter is explicitly set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>par</strong> (<em>str</em>) &#8211; The name of the parameter.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool &#8211; True if parameter is explicitly set in one of the replicate groups.</td>
+</tr>
+</tbody>
+</table>
+<p>See chapter <a class="reference internal" href="gatdoc/gatparameters.html#gat-parameters"><em>parameters</em></a> for details of
+parameter handling and available parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setMaxGrowthLowerTimeCutoff">
+<tt class="descname">setMaxGrowthLowerTimeCutoff</tt><big>(</big><em>t</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setMaxGrowthLowerTimeCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set lower limit of interval in which the maximal growth should be searched.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setMaxGrowthUpperTimeCutoff">
+<tt class="descname">setMaxGrowthUpperTimeCutoff</tt><big>(</big><em>t</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setMaxGrowthUpperTimeCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set upper limit of interval in which the maximal growth should be searched.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setLogOdCutoff">
+<tt class="descname">setLogOdCutoff</tt><big>(</big><em>lod</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setLogOdCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set cutoff value of log(OD).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setLagAtLogOdEquals">
+<tt class="descname">setLagAtLogOdEquals</tt><big>(</big><em>lagat</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setLagAtLogOdEquals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set value of log(OD) used to define the lag time.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setHighDensityCorrectionLinear">
+<tt class="descname">setHighDensityCorrectionLinear</tt><big>(</big><em>hdCorrectionLinear=None</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setHighDensityCorrectionLinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set coefficient of linear term of high density correction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setHighDensityCorrectionQuadratic">
+<tt class="descname">setHighDensityCorrectionQuadratic</tt><big>(</big><em>hdCorrectionQuadratic=None</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setHighDensityCorrectionQuadratic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set coefficient of quadratic term of high density correction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setHighDensityCorrectionCubic">
+<tt class="descname">setHighDensityCorrectionCubic</tt><big>(</big><em>hdCorrectionCubic=None</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setHighDensityCorrectionCubic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set coefficient of cubic term of high density correction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setSmoothingK">
+<tt class="descname">setSmoothingK</tt><big>(</big><em>k</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setSmoothingK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set degree of the smoothing spline.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setSmoothingS">
+<tt class="descname">setSmoothingS</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setSmoothingS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set smoothing factor used to choose the number of knots.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.setSlidingWindowSize">
+<tt class="descname">setSlidingWindowSize</tt><big>(</big><em>win</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.setSlidingWindowSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set number of datapoints of sliding windows.</p>
+<p>The value that is used for local exponential fit (growth rate) and linear regression (growth yield).</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="platereader.plate.Plate.guessWellIds">
+<em class="property">static </em><tt class="descname">guessWellIds</tt><big>(</big><em>numberOfWells</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.guessWellIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return well ids by guessing the plate layout based on number of wells.</p>
+<p>This function will return A1-P24 or A1-H12.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>numberOfWells</strong> (<em>int</em>) &#8211; number of wells of the plate</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list(str) &#8211; the guessed well ids (None if layout could not be guessed)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="platereader.plate.Plate.availableColumnsForCsvExport">
+<em class="property">static </em><tt class="descname">availableColumnsForCsvExport</tt><big>(</big><em>logOdDerivativeProperties=True</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.availableColumnsForCsvExport" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the available properties that can be chosen for csv export.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>logOdDerivativeProperties</strong> (<em>bool</em>) &#8211; include properties determined from log(OD) derivative</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list(str), list(str) &#8211; fixed columns (ids), properties</td>
+</tr>
+</tbody>
+</table>
+<p>The &#8216;fixed columns&#8217; list contains the sample/condition tuples
+which should always be exported in order to identify the
+replicates. For the other properties (except &#8216;wellids&#8217;) the
+variance can be chosen by adding &#8216;_var&#8217; to the property name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.growthParametersToCsv">
+<tt class="descname">growthParametersToCsv</tt><big>(</big><em>filename</em>, <em>addVarianceColumns=True</em>, <em>singleWells=False</em>, <em>columns=None</em>, <em>progressCall=None</em>, <em>**csvkwargs</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.growthParametersToCsv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a &#8220;comma seperated values&#8221; (csv) file of properties for all replicate groups.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<em>string</em>) &#8211; Filename.</li>
+<li><strong>columns</strong> (<em>list(str)</em>) &#8211; List of properties that shall get exported (in that order).</li>
+<li><strong>addVarianceColumns</strong> (<em>bool</em>) &#8211; For each entry in columns add the corresponding variance</li>
+<li><strong>singleWells</strong> (<em>bool</em>) &#8211; Export properties of single well replicates instead of replicate groups</li>
+<li><strong>progressCall</strong> (<em>&#64;fun(int)</em>) &#8211; Function that will be called on each iteration.</li>
+<li><strong>csvkwargs</strong> (<em>dict()</em>) &#8211; Parameters which are passed on to the csv module; defaults to { &#8216;dialect&#8217;: &#8216;excel&#8217; }</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.plate.Plate.timeseriesToCsv">
+<tt class="descname">timeseriesToCsv</tt><big>(</big><em>filename</em>, <em>addVarianceColumns=True</em>, <em>singleWells=False</em>, <em>columns=None</em>, <em>fullId=False</em>, <em>progressCall=None</em>, <em>**csvkwargs</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.timeseriesToCsv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a &#8220;comma seperated values&#8221; (csv) file of time series for all replicate groups.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<em>string</em>) &#8211; Filename.</li>
+<li><strong>columns</strong> (<em>list(str)</em>) &#8211; List of time series that shall get exported for each replicate.</li>
+<li><strong>addVarianceColumns</strong> (<em>bool</em>) &#8211; For each entry in columns add the corresponding variance</li>
+<li><strong>singleWells</strong> (<em>bool</em>) &#8211; Export time series of single well replicates instead of replicate groups</li>
+<li><strong>fullId</strong> (<em>bool</em>) &#8211; Label the columns with the full id (including well ids) instead of &#8220;sample condition&#8221;</li>
+<li><strong>progressCall</strong> (<em>&#64;fun(int)</em>) &#8211; Function that will be called on each iteration.</li>
+<li><strong>csvkwargs</strong> (<em>dict()</em>) &#8211; Parameters which are passed on to the csv module; defaults to { &#8216;dialect&#8217;: &#8216;excel&#8217; }</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="platereader.plate.Plate.writeMetadata">
+<em class="property">static </em><tt class="descname">writeMetadata</tt><big>(</big><em>filename</em>, <em>metadata</em>, <em>metadataKeys</em>, <em>plateformat='96'</em>, <em>**csvkwargs</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.writeMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>metadata</strong> (<em>list(dict)</em>) &#8211; the metadata</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="platereader.plate.Plate.readMetadata">
+<em class="property">static </em><tt class="descname">readMetadata</tt><big>(</big><em>filename</em>, <em>plateformat='96'</em>, <em>**csvkwargs</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.readMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read metadata from a csv file.</p>
+<p>For each metadata key a table is read. The table should be laid
+out as according to the plate layout. To get a template, call
+writeMetadata(outfile,[{} for i in range(numOfColumns)],Plate.metadataKeys)</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="platereader.plate.Plate.Error">
+<em class="property">exception </em><tt class="descname">Error</tt><a class="headerlink" href="#platereader.plate.Plate.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></tt></p>
+<p>Base class for exceptions in this module.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="platereader.plate.Plate.MultipleBackgroundIdsError">
+<em class="property">exception </em><tt class="descclassname">Plate.</tt><tt class="descname">MultipleBackgroundIdsError</tt><big>(</big><em>backgroundSampleIds</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.MultipleBackgroundIdsError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">platereader.plate.Error</span></tt></p>
+<p>Exception raised if there are different IDs for background wells.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="platereader.plate.Plate.UnknownFileFormat">
+<em class="property">exception </em><tt class="descclassname">Plate.</tt><tt class="descname">UnknownFileFormat</tt><big>(</big><em>filename</em>, <em>serFormat=None</em>, <em>serFormatVersion=None</em>, <em>detailedError=None</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.UnknownFileFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">platereader.plate.Error</span></tt></p>
+<p>Exception raised when an unsupported serialisation format is opened.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="platereader.plate.Plate.BadMetadata">
+<em class="property">exception </em><tt class="descclassname">Plate.</tt><tt class="descname">BadMetadata</tt><big>(</big><em>detailedError=None</em>, <em>lineno=None</em>, <em>filename=None</em><big>)</big><a class="headerlink" href="#platereader.plate.Plate.BadMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">platereader.plate.Error</span></tt></p>
+<p>Exception raised when an unsupported serialisation format is opened.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="platereader.replicate.Replicate">
+<em class="property">class </em><tt class="descclassname">platereader.replicate.</tt><tt class="descname">Replicate</tt><big>(</big><em>parentPlate=None</em>, <em>wellIndices=None</em>, <em>sampleid=None</em>, <em>condition=None</em>, <em>wellids=None</em>, <em>activeWellIndices=None</em>, <em>isReplicateGroup=False</em>, <em>_unpickled=None</em>, <em>_serialiseFormat=None</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>A time series of optical density measurements for a single well or a group of replicates.</p>
+<p>Constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>parentPlate</strong> (<em>Plate</em>) &#8211; Object of the plate this well/replicate group is part of.</li>
+<li><strong>wellIndices</strong> (<em>list(int)</em>) &#8211; Indices into the parent-plate&#8217;s array of well objects.</li>
+<li><strong>sampleid</strong> (<em>str</em>) &#8211; Identifier of this Replicate.</li>
+<li><strong>condition</strong> (<em>str</em>) &#8211; Growth condition of this Replicate.</li>
+<li><strong>wellids</strong> (<em>list(str)</em>) &#8211; Identifiers denoting the location(s) of this replicate&#8217;s wells within the plate.</li>
+<li><strong>activeWellIndices</strong> (<em>list(int)</em>) &#8211; Indices into the vector of child wells of this replicate group (from interval [0,len(wellIndices)[)</li>
+<li><strong>isReplicateGroup</strong> &#8211; Whether this is a replicate group (not a single well)</li>
+<li><strong>isReplicateGroup</strong> &#8211; bool</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The following two parameters should only be used when
+implementing a deserialiser.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>_unpickled</strong> &#8211; dictionary of serialised Replicate object; used by plate deserialisation code.</li>
+<li><strong>_unpickled</strong> &#8211; dict</li>
+<li><strong>_serialiseFormat</strong> &#8211; format of serialisation; used by plate deserialisation code.</li>
+<li><strong>_serialiseFormat</strong> &#8211; str</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="platereader.replicate.Replicate.fullId">
+<tt class="descname">fullId</tt><big>(</big><em>withPlateId=False</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.fullId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return string containing enough information to uniquely identify this Replicate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>withPlateId</strong> (<em>bool</em>) &#8211; If True includes the identifier string of the plate.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">str &#8211; A human readable string identifying this well/set of wells.</td>
+</tr>
+</tbody>
+</table>
+<p>The string contains enough information to uniquely
+identify the well (sample id, condition, well location,
+active child wells)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.replicateGroupParent">
+<tt class="descname">replicateGroupParent</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.replicateGroupParent" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Replicate &#8211; The replicate group this well is a child of.</td>
+</tr>
+</tbody>
+</table>
+<p>A <a class="reference internal" href="#platereader.replicate.Replicate" title="platereader.replicate.Replicate"><tt class="xref py py-class docutils literal"><span class="pre">single-well</span></tt></a> usually is
+part of a replicate group. The child objects of a
+replicate group are used to calculate properties such as
+growth rate, lag time etc. This method returns the
+replicate group parent if this is a single-well object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.isReplicateGroup">
+<tt class="descname">isReplicateGroup</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.isReplicateGroup" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool &#8211; True if this is a replicate group (not a single well).</td>
+</tr>
+</tbody>
+</table>
+<p>For details see the <a class="reference internal" href="#platereader.replicate.Replicate.replicateGroupParent" title="platereader.replicate.Replicate.replicateGroupParent"><tt class="xref py py-meth docutils literal"><span class="pre">documentation</span> <span class="pre">of</span>
+<span class="pre">replicateGroupParent</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.childWellIndices">
+<tt class="descname">childWellIndices</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.childWellIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the indices into the plate&#8217;s single-well object array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(int) &#8211; Absolute indices of all child wells.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">the indices are <em>global indices</em> into the array of
+single-well objects of the plate.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.childWells">
+<tt class="descname">childWells</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.childWells" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the single-well child objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate) &#8211; child wells of this replicate.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.setActiveChildWellIndices">
+<tt class="descname">setActiveChildWellIndices</tt><big>(</big><em>activeWellIndices</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.setActiveChildWellIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the active wells of this Replicate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>activeWellIndices</strong> (<em>list(int)</em>) &#8211; Indices into the vector of child wells of this replicate group.</td>
+</tr>
+</tbody>
+</table>
+<p>A replicate group object consists of multiple wells (its
+children). This method changes which of these are used
+when calculating properties such as growth rate, lag time
+etc.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">these indices are <em>local</em> indices into the list of
+well indices of this replicate group, i.e. the maximal
+value should be (number of child wells - 1).</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.activateChildWellIndex">
+<tt class="descname">activateChildWellIndex</tt><big>(</big><em>index</em>, <em>value</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.activateChildWellIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>The child with the given index will be (de-)activated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>index</strong> (<em>bool</em>) &#8211; Index into the vector of child wells of this replicate group.</li>
+<li><strong>value</strong> &#8211; Set to True to activate, False to deactivate.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>For details see the <a class="reference internal" href="#platereader.replicate.Replicate.setActiveChildWellIndices" title="platereader.replicate.Replicate.setActiveChildWellIndices"><tt class="xref py py-meth docutils literal"><span class="pre">documentation</span> <span class="pre">of</span>
+<span class="pre">setActiveChildWellIndices</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.activeChildWellIndices">
+<tt class="descname">activeChildWellIndices</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.activeChildWellIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the indices of the active child-wells.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(int) &#8211; Local indices of active child wells.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">these indices are <em>local</em> indices into the list of
+well indices of this replicate, i.e. the maximal
+value should be (number of child wells - 1).</p>
+</div>
+<p>For details see the <a class="reference internal" href="#platereader.replicate.Replicate.setActiveChildWellIndices" title="platereader.replicate.Replicate.setActiveChildWellIndices"><tt class="xref py py-meth docutils literal"><span class="pre">documentation</span> <span class="pre">of</span>
+<span class="pre">setActiveChildWellIndices</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.activeChildWells">
+<tt class="descname">activeChildWells</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.activeChildWells" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the objects of the active child-wells.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate) &#8211; active child wells of this Replicate.</td>
+</tr>
+</tbody>
+</table>
+<p>For details see the <a class="reference internal" href="#platereader.replicate.Replicate.setActiveChildWellIndices" title="platereader.replicate.Replicate.setActiveChildWellIndices"><tt class="xref py py-meth docutils literal"><span class="pre">documentation</span> <span class="pre">of</span>
+<span class="pre">setActiveChildWellIndices</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.activeChildWellIds">
+<tt class="descname">activeChildWellIds</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.activeChildWellIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return ids of active child-wells as list of strings.</p>
+<p>If well ids are set, return these, otherwise return the indices of the wells.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(str) &#8211; A list of human readable strings identifying this&#8217; active well/set of wells.</td>
+</tr>
+</tbody>
+</table>
+<p>For details see the <a class="reference internal" href="#platereader.replicate.Replicate.setActiveChildWellIndices" title="platereader.replicate.Replicate.setActiveChildWellIndices"><tt class="xref py py-meth docutils literal"><span class="pre">documentation</span> <span class="pre">of</span>
+<span class="pre">setActiveChildWellIndices</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.activeChildWellIdStr">
+<tt class="descname">activeChildWellIdStr</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.activeChildWellIdStr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return ids of active child-wells as string.</p>
+<p>If well ids are set, return these, otherwise return the indices of the wells.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str &#8211; A human readable string identifying this&#8217; active well/set of wells.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.getParameter">
+<tt class="descname">getParameter</tt><big>(</big><em>par</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.getParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the requested parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>par</strong> (<em>str</em>) &#8211; The name of the parameter.</td>
+</tr>
+</tbody>
+</table>
+<p>If the parameter is explicitly set for this replicate
+this value returned. Otherwise return an inherited value
+from either the replicate group this one is part of,
+or the plate default.</p>
+<p>See chapter <a class="reference internal" href="gatdoc/gatparameters.html#gat-parameters"><em>parameters</em></a> for details of
+parameter handling and available parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.parameterIsEditible">
+<tt class="descname">parameterIsEditible</tt><big>(</big><em>par</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.parameterIsEditible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if this is a parameter that is editible for a Replicate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool &#8211; True if parameter can be edited.</td>
+</tr>
+</tbody>
+</table>
+<p>Some parameters can only be changed per Replicate, some only
+per Plate. This method is used to distinguish between them.</p>
+<p>See chapter <a class="reference internal" href="gatdoc/gatparameters.html#gat-parameters"><em>parameters</em></a> for details of
+parameter handling and available parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.parameterIsExplicitlySet">
+<tt class="descname">parameterIsExplicitlySet</tt><big>(</big><em>par</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.parameterIsExplicitlySet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if this is parameter is explicitly set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>par</strong> (<em>str</em>) &#8211; The name of the parameter.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool &#8211; True if parameter is explicitly set.</td>
+</tr>
+</tbody>
+</table>
+<p>If a parameter is explicitly set for a replicate it overrides
+an inherited value. This method is used to tell whether this
+is the case.</p>
+<p>See chapter <a class="reference internal" href="gatdoc/gatparameters.html#gat-parameters"><em>parameters</em></a> for details of
+parameter handling and available parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.activeChildReplicatesHaveExplicitParameter">
+<tt class="descname">activeChildReplicatesHaveExplicitParameter</tt><big>(</big><em>par</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.activeChildReplicatesHaveExplicitParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if this is a ReplicateGroup and for at least one of the active child-wells the given parameter is explicitly set.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>par</strong> (<em>str</em>) &#8211; The name of the parameter.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool &#8211; True if parameter is explicitly set in one of the active child wells.</td>
+</tr>
+</tbody>
+</table>
+<p>See chapter <a class="reference internal" href="gatdoc/gatparameters.html#gat-parameters"><em>parameters</em></a> for details of
+parameter handling and available parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.hdCorrectionLinear">
+<tt class="descname">hdCorrectionLinear</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.hdCorrectionLinear" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float &#8211; Coefficient of linear term of high density correction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.hdCorrectionQuadratic">
+<tt class="descname">hdCorrectionQuadratic</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.hdCorrectionQuadratic" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float &#8211; Coefficient of quadratic term of high density correction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.hdCorrectionCubic">
+<tt class="descname">hdCorrectionCubic</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.hdCorrectionCubic" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float &#8211; Coefficient of cubic term of high density correction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.smoothingK">
+<tt class="descname">smoothingK</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.smoothingK" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int &#8211; Degree of the smoothing spline.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.smoothingS">
+<tt class="descname">smoothingS</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.smoothingS" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float &#8211; Smoothing factor used to choose the number of knots.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.maxGrowthLowerTimeCutoff">
+<tt class="descname">maxGrowthLowerTimeCutoff</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.maxGrowthLowerTimeCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float &#8211; Lower limit of interval in which the maximal growth should be searched.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.maxGrowthUpperTimeCutoff">
+<tt class="descname">maxGrowthUpperTimeCutoff</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.maxGrowthUpperTimeCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float &#8211; Upper limit of interval in which the maximal growth should be searched.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.logOdCutoff">
+<tt class="descname">logOdCutoff</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.logOdCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float &#8211; Cutoff value of log(OD).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.slidingWindowSize">
+<tt class="descname">slidingWindowSize</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.slidingWindowSize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int &#8211; Number of datapoints of sliding windows.</td>
+</tr>
+</tbody>
+</table>
+<p>The value that is used for local exponential fit (growth rate) and linear regression (growth yield).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.lagAtLogOdEquals">
+<tt class="descname">lagAtLogOdEquals</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.lagAtLogOdEquals" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float &#8211; Value of log(OD) used to define the lag time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.allowMaxGrowthrateAtLowerCutoff">
+<tt class="descname">allowMaxGrowthrateAtLowerCutoff</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.allowMaxGrowthrateAtLowerCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool &#8211; Whether or not the maximal growth rate is allowed at the interval limits.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.allowGrowthyieldSlopeNStderrAwayFromZero">
+<tt class="descname">allowGrowthyieldSlopeNStderrAwayFromZero</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.allowGrowthyieldSlopeNStderrAwayFromZero" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int &#8211; Number of standard errors the slope may be away from zero to detect stationary state of yield.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.setMaxGrowthLowerTimeCutoff">
+<tt class="descname">setMaxGrowthLowerTimeCutoff</tt><big>(</big><em>t</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.setMaxGrowthLowerTimeCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set lower limit of interval in which the maximal growth should be searched.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.setMaxGrowthUpperTimeCutoff">
+<tt class="descname">setMaxGrowthUpperTimeCutoff</tt><big>(</big><em>t</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.setMaxGrowthUpperTimeCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set upper limit of interval in which the maximal growth should be searched.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.setAllowMaxGrowthrateAtLowerCutoff">
+<tt class="descname">setAllowMaxGrowthrateAtLowerCutoff</tt><big>(</big><em>boolval</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.setAllowMaxGrowthrateAtLowerCutoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Dis)allow the maximal growth rate at the lower interval limit.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.setAllowGrowthyieldSlopeNStderrAwayFromZero">
+<tt class="descname">setAllowGrowthyieldSlopeNStderrAwayFromZero</tt><big>(</big><em>numTimesStderr</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.setAllowGrowthyieldSlopeNStderrAwayFromZero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set number of standard errors the slope may be away from zero to detect stationary state of yield.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.rawOd">
+<tt class="descname">rawOd</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.rawOd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the raw readout of the optical density.</p>
+<p>The raw optical density is not preprocessed, i.e. the
+background has not been subtracted and it is not corrected for
+non-linearities at high densities.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.rawOdVar">
+<tt class="descname">rawOdVar</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.rawOdVar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the variance of raw readout of the optical density.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.od">
+<tt class="descname">od</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.od" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the background- and high-density corrected optical density.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.odVar">
+<tt class="descname">odVar</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.odVar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the variance of the background- and high-density corrected optical density.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.derivative">
+<tt class="descname">derivative</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the (left) derivative of the background- and high-density corrected optical density.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.smoothedOd">
+<tt class="descname">smoothedOd</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.smoothedOd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return smoothing spline of optical density.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">numpy.array(float) &#8211; Smoothed optical density.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.smoothedOdDerivative">
+<tt class="descname">smoothedOdDerivative</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.smoothedOdDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return derivative of smoothed optical density.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">numpy.array(float) &#8211; Derivative of smoothed optical density.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.logOd">
+<tt class="descname">logOd</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.logOd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the logarithm of the background- and high-density corrected optical density.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.logOdSmoothed">
+<tt class="descname">logOdSmoothed</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.logOdSmoothed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return smoothed logarithm optical density.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">numpy.array(float) &#8211; Smoothed log(OD).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.logOdDerivative">
+<tt class="descname">logOdDerivative</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.logOdDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return derivative of logarithmised optical density.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">numpy.array(float) &#8211; Derivative of logarithmised optical density.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.logOdDerivativeFromNonLog">
+<tt class="descname">logOdDerivativeFromNonLog</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.logOdDerivativeFromNonLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return derivative of logarithmised optical density (by chain rule).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">numpy.array(float) &#8211; Derivative of logarithmised optical density.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.logOdDerivativeFromNonLogSmoothed">
+<tt class="descname">logOdDerivativeFromNonLogSmoothed</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.logOdDerivativeFromNonLogSmoothed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return smoothed derivative of logarithmised optical density (by chain rule).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">numpy.array(float) &#8211; Derivative of logarithmised optical density.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.expFitsOd0Mu">
+<tt class="descname">expFitsOd0Mu</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.expFitsOd0Mu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return parameters for fitted exponential functions (two parameters: OD0 and mu).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">numpy.array(float), numpy.array(float), numpy.array(float), numpy.array(float) &#8211; mean(mu), var(mu), mean(od0), var(od0)</td>
+</tr>
+</tbody>
+</table>
+<p>Exponential functions are fitted piecewise to <img class="math" src="_images/math/9ee4b825a2e36ae093ed7be5e4851ef453b34914.png" alt="w"/> (see
+<a class="reference internal" href="gatdoc/gatparameters.html#fit-window"><em>Fit window</em></a>) data points. Note that the inital value
+<img class="math" src="_images/math/4b00e98caf9736b93c6aaa5a4af84f8f7fe0013b.png" alt="\odz_{t0}"/> assumes that <img class="math" src="_images/math/5a607fd61885c014512c949fee18869690330407.png" alt="t=0"/> for the first data
+point of the fit window; to convert it to the real time you
+should use the formula <img class="math" src="_images/math/ab01e0b5ed968ad4f3992a87731de6d1af965ad9.png" alt="\odz = \odz_{t0} e^{-\mu
+t_0}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.expFitsMu">
+<tt class="descname">expFitsMu</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.expFitsMu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return parameters for fitted exponential functions (one parameter: mu).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">numpy.array(float), numpy.array(float) &#8211; mean(mu), var(mu)</td>
+</tr>
+</tbody>
+</table>
+<p>Exponential functions are fitted piecewise to <img class="math" src="_images/math/9ee4b825a2e36ae093ed7be5e4851ef453b34914.png" alt="w"/> (see
+<a class="reference internal" href="gatdoc/gatparameters.html#fit-window"><em>Fit window</em></a>) data points. Only the growth rate
+<img class="math" src="_images/math/2d8c833ed800824727cd7bd2fb9de1a12ad7e674.png" alt="\mu"/> is fitted, the first data point from <img class="math" src="_images/math/9ee4b825a2e36ae093ed7be5e4851ef453b34914.png" alt="w"/> is
+used as initial value of the exponential function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.maxGrowthrateFromLogOdDerivative">
+<tt class="descname">maxGrowthrateFromLogOdDerivative</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.maxGrowthrateFromLogOdDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return parameters for exponential function at maximal growth rate (determined from log(OD) derivative).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">mean(mu), var(mu), mean(od0), var(od0), mean(maxt), var(maxt), mean(lag), var(lag), method, statuses</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.maxGrowthrate">
+<tt class="descname">maxGrowthrate</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.maxGrowthrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return parameters for exponential function at maximal growth rate (determined from fitted exponential functions).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">mean(mu), var(mu), mean(od0), var(od0), mean(maxt), var(maxt), mean(lag), var(lag), method, statuses</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.odSlopemaxIntercept">
+<tt class="descname">odSlopemaxIntercept</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.odSlopemaxIntercept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return maximal slope, intercept, time of maximal slope and time index of the (linear) OD.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float, float, float, float, float, float, numpy.array(int), StatusMessage &#8211; mean(slope), var(slope), mean(intercept), var(intercept), mean(timemax), var(timemax), timemaxIdcs, status</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.replicate.Replicate.growthyield">
+<tt class="descname">growthyield</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.growthyield" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return estimate of the growth yield by looking for a slope (from linear regression in a time window) compatible with zero.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float, float, float, float, StatusMessage &#8211; mean(yield), var(yield), mean(timeOfYield), var(timeOfYield), status</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="platereader.replicate.Replicate.growthrateToDoublingTime">
+<em class="property">static </em><tt class="descname">growthrateToDoublingTime</tt><big>(</big><em>mu</em>, <em>mu_var</em><big>)</big><a class="headerlink" href="#platereader.replicate.Replicate.growthrateToDoublingTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate doubling time from growth rate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mu</strong> (<em>float</em>) &#8211; The growth rate.</li>
+<li><strong>mu_var</strong> (<em>float</em>) &#8211; The variance of the growth rate.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">float, float &#8211; doubling time, variance of doubling time</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="cathode">
+<h2>CATHODE<a class="headerlink" href="#cathode" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="platereader.cls.Cls">
+<em class="property">class </em><tt class="descclassname">platereader.cls.</tt><tt class="descname">Cls</tt><big>(</big><em>files=None</em>, <em>days=None</em>, <em>serialisedFilename=None</em><big>)</big><a class="headerlink" href="#platereader.cls.Cls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<dl class="method">
+<dt id="platereader.cls.Cls.reload">
+<tt class="descname">reload</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.cls.Cls.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload the underlying <a class="reference internal" href="#platereader.plate.Plate" title="platereader.plate.Plate"><tt class="xref py py-class docutils literal"><span class="pre">Plates</span></tt></a>.</p>
+<p>The activation of the ClsReplicate groups is preserved.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.cls.Cls.saveLightweight">
+<tt class="descname">saveLightweight</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#platereader.cls.Cls.saveLightweight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Partially serialise CLS data and save to file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<em>str</em>) &#8211; Name of the file.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">StatusMessage/None &#8211; non-fatal notifications.</td>
+</tr>
+</tbody>
+</table>
+<p>Allows to preserve the state of activated wells. The plates
+are not saved, therefore their relative file location must not
+change for the loading to work.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.cls.Cls.clsReplicateGroupIdxForSampleCondition">
+<tt class="descname">clsReplicateGroupIdxForSampleCondition</tt><big>(</big><em>sampleid</em>, <em>condition</em><big>)</big><a class="headerlink" href="#platereader.cls.Cls.clsReplicateGroupIdxForSampleCondition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="platereader.cls.Cls.clsReplicateGroupIdcsForCondition">
+<tt class="descname">clsReplicateGroupIdcsForCondition</tt><big>(</big><em>condition</em><big>)</big><a class="headerlink" href="#platereader.cls.Cls.clsReplicateGroupIdcsForCondition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="platereader.cls.Cls.conditions">
+<tt class="descname">conditions</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.cls.Cls.conditions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="platereader.cls.Cls.nonBackgroundClsIndices">
+<tt class="descname">nonBackgroundClsIndices</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.cls.Cls.nonBackgroundClsIndices" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(ClsReplicate) &#8211; ClsReplicate that are not background samples.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.cls.Cls.nonBackgroundCls">
+<tt class="descname">nonBackgroundCls</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.cls.Cls.nonBackgroundCls" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(ClsReplicate) &#8211; Indices of ClsReplicate that are not background samples.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.cls.Cls.numberOfNonBackgroundCls">
+<tt class="descname">numberOfNonBackgroundCls</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.cls.Cls.numberOfNonBackgroundCls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="platereader.cls.Cls.viabilities">
+<tt class="descname">viabilities</tt><big>(</big><em>sampleConditionTuples</em><big>)</big><a class="headerlink" href="#platereader.cls.Cls.viabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="platereader.cls.Cls.survivalToCsv">
+<tt class="descname">survivalToCsv</tt><big>(</big><em>filename</em>, <em>showViabilities=True</em>, <em>columns=None</em>, <em>progressCall=None</em>, <em>**csvkwargs</em><big>)</big><a class="headerlink" href="#platereader.cls.Cls.survivalToCsv" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>csvkwargs</strong> (<em>dict()</em>) &#8211; Parameters which are passed on to the csv module; defaults to { &#8216;dialect&#8217;: &#8216;excel&#8217; }</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="platereader.cls.Cls.differencesInChildActivations">
+<em class="property">static </em><tt class="descname">differencesInChildActivations</tt><big>(</big><em>tc1</em>, <em>tc2</em>, <em>tc1idx</em>, <em>tc2idx</em><big>)</big><a class="headerlink" href="#platereader.cls.Cls.differencesInChildActivations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return differences in sample/condition of wells of two plates.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">StatusMessage &#8211; None if no differences, otherwise a status message with the differences.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="exception">
+<dt id="platereader.cls.Cls.Error">
+<em class="property">exception </em><tt class="descname">Error</tt><a class="headerlink" href="#platereader.cls.Cls.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></tt></p>
+<p>Base class for exceptions in this module.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="platereader.cls.Cls.PlateFileDoesNotExist">
+<em class="property">exception </em><tt class="descclassname">Cls.</tt><tt class="descname">PlateFileDoesNotExist</tt><big>(</big><em>missingfiles</em><big>)</big><a class="headerlink" href="#platereader.cls.Cls.PlateFileDoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">platereader.cls.Error</span></tt></p>
+<p>Exception raised if a plate does not exist (anymore).</p>
+<p>Cls does not store the data in itself, but rather uses
+existing Plate files. If these got (re)moved we
+cannot initialise Cls.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="platereader.cls.Cls.UnknownFileFormat">
+<em class="property">exception </em><tt class="descclassname">Cls.</tt><tt class="descname">UnknownFileFormat</tt><big>(</big><em>filename</em>, <em>serFormat=None</em>, <em>serFormatVersion=None</em>, <em>detailedError=None</em><big>)</big><a class="headerlink" href="#platereader.cls.Cls.UnknownFileFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">platereader.cls.Error</span></tt></p>
+<p>Exception raised when an unsupported serialisation format is opened.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="platereader.clsreplicate.ClsReplicate">
+<em class="property">class </em><tt class="descclassname">platereader.clsreplicate.</tt><tt class="descname">ClsReplicate</tt><big>(</big><em>parent=None</em>, <em>listOfOdReplicates=None</em>, <em>days=None</em>, <em>wellIndices=None</em>, <em>isReplicateGroup=False</em>, <em>wellids=None</em>, <em>sampleid=None</em>, <em>condition=None</em>, <em>status=&lt;platereader.statusmessage.StatusMessage object at 0x45626d0&gt;</em><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.isReplicateGroup">
+<tt class="descname">isReplicateGroup</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.isReplicateGroup" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool &#8211; True if this is a replicate group.</td>
+</tr>
+</tbody>
+</table>
+<p>For details see the <a class="reference internal" href="#platereader.replicate.Replicate.replicateGroupParent" title="platereader.replicate.Replicate.replicateGroupParent"><tt class="xref py py-meth docutils literal"><span class="pre">documentation</span> <span class="pre">of</span>
+<span class="pre">replicateGroupParent</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.childWellIndices">
+<tt class="descname">childWellIndices</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.childWellIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the indices into the plate&#8217;s single-well object array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(int) &#8211; Absolute indices of all child wells.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">the indices are <em>global indices</em> into the array of
+single-well objects of the plate.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.childWells">
+<tt class="descname">childWells</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.childWells" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the single-well cls objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate) &#8211; child cls wells of this replicate.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.setActiveChildWellIndices">
+<tt class="descname">setActiveChildWellIndices</tt><big>(</big><em>activeWellIndices</em><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.setActiveChildWellIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the active wells indices.</p>
+<p>A replicate group object consists of multiple wells (its
+children). This method changes which of these are used
+when calculating properties such as viability etc.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">these indices are <em>local</em> indices into the list of
+well indices of this replicate group, i.e. the maximal
+value should be (number of child wells - 1).</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.activateChildWellIndex">
+<tt class="descname">activateChildWellIndex</tt><big>(</big><em>index</em>, <em>value</em><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.activateChildWellIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>The child with the given index will be (de-)activated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>index</strong> (<em>bool</em>) &#8211; Index into the vector of child ClsReplicate of this replicate group.</li>
+<li><strong>value</strong> &#8211; Set to True to activate, False to deactivate.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>For details see the <a class="reference internal" href="#platereader.clsreplicate.ClsReplicate.setActiveChildWellIndices" title="platereader.clsreplicate.ClsReplicate.setActiveChildWellIndices"><tt class="xref py py-meth docutils literal"><span class="pre">documentation</span> <span class="pre">of</span>
+<span class="pre">setActiveChildWellIndices</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.activeChildWellIndices">
+<tt class="descname">activeChildWellIndices</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.activeChildWellIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the indices of the active children.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(int) &#8211; Local indices of active child wells.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">these indices are <em>local</em> indices into the list of
+well indices of this replicate, i.e. the maximal
+value should be (number of child wells - 1).</p>
+</div>
+<p>For details see the <a class="reference internal" href="#platereader.clsreplicate.ClsReplicate.setActiveChildWellIndices" title="platereader.clsreplicate.ClsReplicate.setActiveChildWellIndices"><tt class="xref py py-meth docutils literal"><span class="pre">documentation</span> <span class="pre">of</span>
+<span class="pre">setActiveChildWellIndices</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.activeChildWells">
+<tt class="descname">activeChildWells</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.activeChildWells" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate) &#8211; active child wells of this Replicate.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.activeChildWellIds">
+<tt class="descname">activeChildWellIds</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.activeChildWellIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return ids of active wells as list of strings.</p>
+<p>If well ids are set, return these, otherwise return the indices of the wells.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(str) &#8211; A list of human readable strings identifying this&#8217; active well/set of wells.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.activeChildWellIdStr">
+<tt class="descname">activeChildWellIdStr</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.activeChildWellIdStr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return ids of active wells as string.</p>
+<p>If well ids are set, return these, otherwise return the indices of the wells.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str &#8211; A human readable string identifying this&#8217; active well/set of wells.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.odReplicatesNdays">
+<tt class="descname">odReplicatesNdays</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.odReplicatesNdays" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(Replicate), list(float) &#8211; replicate objects of the underlying plates, days.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.fullId">
+<tt class="descname">fullId</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.fullId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return string containing enough information to uniquely identify this ClsReplicate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str &#8211; A human readable string identifying this well/set of wells.</td>
+</tr>
+</tbody>
+</table>
+<p>The string contains enough information to uniquely
+identify the well (sample id, condition, well location,
+active child wells)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.viability">
+<tt class="descname">viability</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.viability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the viability.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list(float), list(float), list(float), StatusMessage &#8211; days, viability, var(viability), status.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.clsreplicate.ClsReplicate.survivalIntegral">
+<tt class="descname">survivalIntegral</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.clsreplicate.ClsReplicate.survivalIntegral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the survival integral.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float, float, StatusMessage &#8211; survival integral, var(survival integral), status.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="statusmessage">
+<h2>StatusMessage<a class="headerlink" href="#statusmessage" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="platereader.statusmessage.StatusMessage">
+<em class="property">class </em><tt class="descclassname">platereader.statusmessage.</tt><tt class="descname">StatusMessage</tt><big>(</big><em>key=None</em>, <em>shortmsg=None</em>, <em>longmsg=None</em>, <em>severity=1</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Holds (multiple) status information.</p>
+<p>This class allows to collect status information (e.g. for a
+dataset).</p>
+<p>This class can be either a list of statuses or a single status.</p>
+<p>For a single status, the <a class="reference internal" href="#platereader.statusmessage.StatusMessage.message" title="platereader.statusmessage.StatusMessage.message"><tt class="xref py py-meth docutils literal"><span class="pre">message</span></tt></a> method returns a string representation
+of the status.</p>
+<p>For a list of statuses, the <a class="reference internal" href="#platereader.statusmessage.StatusMessage.message" title="platereader.statusmessage.StatusMessage.message"><tt class="xref py py-meth docutils literal"><span class="pre">message</span></tt></a> method returns a single string,
+consisting of one string representation for each status-type. If a
+status-type exists multiple times, only the highest priority
+message of this type is shown.</p>
+<p>As an alternative to the <a class="reference internal" href="#platereader.statusmessage.StatusMessage.message" title="platereader.statusmessage.StatusMessage.message"><tt class="xref py py-meth docutils literal"><span class="pre">message</span></tt></a> method, you can use
+<a class="reference internal" href="#platereader.statusmessage.StatusMessage.type2status" title="platereader.statusmessage.StatusMessage.type2status"><tt class="xref py py-meth docutils literal"><span class="pre">type2status</span></tt></a> and assemble
+the required string yourself.</p>
+<p>Initialise with a keyword and a dict of further parameters, or with a list of (sub)statuses.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> (<em>string</em>) &#8211; The key-type this single-status belongs to.</li>
+<li><strong>shortmsg</strong> (<em>string</em>) &#8211; The short message.</li>
+<li><strong>longmsg</strong> (<em>string</em>) &#8211; The long message.</li>
+<li><strong>severity</strong> (<em>Severity</em>) &#8211; The severity (importance) of this message.</li>
+<li><strong>kwargs</strong> (<em>string</em>) &#8211; Additional keywords that can be used in shortmsg and longmsg as
+keyword arguments for <a class="reference external" href="https://docs.python.org/2/library/string.html#string.Formatter.format">string format</a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.isEmpty">
+<tt class="descname">isEmpty</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.isEmpty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if this is an empty StatusMessage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool &#8211; True if empty.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.statusesWithKey">
+<tt class="descname">statusesWithKey</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.statusesWithKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of all substatuses that have the given key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>string</em>) &#8211; The key-type that substatus should match.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list(StatusMessage) &#8211; status messages of type key.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.addStatus">
+<tt class="descname">addStatus</tt><big>(</big><em>status</em><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.addStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a substatus to this status.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>status</strong> (<em>StatusMessage</em>) &#8211; The substatus that should be added.</td>
+</tr>
+</tbody>
+</table>
+<p>Raises exception if this object was not initialised as list of statuses.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.removeStatusesWithKey">
+<tt class="descname">removeStatusesWithKey</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.removeStatusesWithKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all substatuses that have the given key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>string</em>) &#8211; The key-type that substatus should match.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">int &#8211; number of removed status messages.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.shortmessage">
+<tt class="descname">shortmessage</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.shortmessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Short message for this status (only works for primary status, not for list of statuses)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str &#8211; Short message describing this status.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.longmessage">
+<tt class="descname">longmessage</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.longmessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Long message for this status (only works for primary status, not for list of statuses)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str &#8211; Long message describing this status.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.messageType">
+<tt class="descname">messageType</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.messageType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Message type for this status (only works for primary status, not for list of statuses)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str &#8211; String describing the type of this status.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.type2status">
+<tt class="descname">type2status</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.type2status" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dict &#8211; Dictionary that for each message type contains the highest priority message.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.message">
+<tt class="descname">message</tt><big>(</big><em>withMsgType=True</em>, <em>seperator='; '</em><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.message" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str &#8211; Status message.</td>
+</tr>
+</tbody>
+</table>
+<p>For a list of (sub)statuses, only shows the one with the
+highest priority/severity for each category (message
+type).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.severity">
+<tt class="descname">severity</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.severity" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Severity &#8211; The severity/priority of this status.</td>
+</tr>
+</tbody>
+</table>
+<p>If this is a list of (sub)statuses return the higest.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="platereader.statusmessage.StatusMessage.severity2">
+<tt class="descname">severity2</tt><big>(</big><big>)</big><a class="headerlink" href="#platereader.statusmessage.StatusMessage.severity2" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Severity &#8211; The second-level severity/priority of this status.</td>
+</tr>
+</tbody>
+</table>
+<p>For this to work the parameter dict has to contain the
+&#8216;severity2&#8217; entry; if this is not set return 0.</p>
+<p>If this is a list of (sub)statuses return the higest.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014-2015, Nils Christian.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+..
+   Local Variables:
+   ispell-local-dictionary: "en_GB"
+   End:
+
+.. _gat parameters:
+
+Parameters
+==========
+
+In this chapter we describe how parameters are handled in GATHODE,
+which parameters exist and which properties they influence.
+
+.. _changing parameters:
+
+Changing parameters
+-------------------
+
+In GATHODE, the extraction of properties (such as maximal growth rate,
+growth yield, etc.) depends on certain parameters.
+
+Some parameters are defined for the whole plate, whereas other
+parameters can have plate-wide defaults which can be overridden for
+each replicate group or even each single well.
+
+To change a plate parameter or a plate default parameter, make sure no
+replicate is selected from the list. Parameters which have been
+explicitly set have a white background, parameters without a value
+have a grey background. In the following screenshot, the lower cutoff
+of the maximal growth is set while the upper cutoff of the maximal
+growth values is unset.
+
+.. image:: _static/screenshots/gatdefaultparameters.*
+   :scale: 100%
+   :alt: Plate default parameters
+
+Parameters can also be set for a single :samp:`{sample}_{condition}`
+replicate group, or even for a single well. Parameters are inherited from
+plate to replicate group and from replicate group to single well. Parameters
+inherited from the plate that are not changed by any of the *child*
+wells (wells constituting the replicate group) have a grey background,
+parameters explicitly set without a change in its *child* wells have a
+white background. Parameters that are modified in at least one of the
+underlying single wells but are otherwise set to the plate-wide
+default change their background colour from grey to white from top to
+bottom. In contrast, the background of parameters that are explicitly
+set and at least one of the underlying single wells has a modified
+value, change from grey to white from left to right. In the screenshot
+below, the lower cutoff for the maximal growth rate is explicitly
+changed for the selected replicate group, and in at least one of its *child*
+wells the value is changed further. The value of the upper cutoff is
+not changed for this replicate group, but one of the *child* wells has a
+differing value.
+
+.. image:: _static/screenshots/gatreplicateparameters.*
+   :scale: 100%
+   :alt: Replicate parameters
+
+
+Parameter descriptions
+----------------------
+
+Normal Parameters
+:::::::::::::::::
+
+
+.. _high density correction parameters:
+
+High density correction
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The optical density at high values is corrected by a cubic function
+whose parameters are the three coefficients a\ :sub:`1`, a\ :sub:`2`
+and a\ :sub:`3`. For details see :ref:`High density correction <High
+density correction>`.
+
+
+.. _logOD cutoff:
+
+``log(OD)`` cutoff
+~~~~~~~~~~~~~~~~~~
+
+Allows to restrain the detection of all properties to locations where
+the value of :math:`\log{\textrm{OD}}` is above this cutoff. This can
+ensure that the noise at low OD does not hamper the detection
+algorithms. Further, all figures use this as the lower value of the
+OD-range in the log-scale.
+
+
+.. _smoothing:
+
+Smoothing
+~~~~~~~~~
+
+To obtain a smoother curve of the optical density, it can be
+preprocessed by a smoothing spline. In GATHODE the function
+`UnivariateSpline
+<http://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.UnivariateSpline.html>`_
+from the `SciPy <http://docs.scipy.org/doc/scipy/reference/>`_ library
+is used for this and the two parameters ``k`` and ``s`` correspond to
+the degree of the smoothing spline and the smoothing factor,
+respectively.
+
+The outcome of the :ref:`growth yield` is influenced by these
+parameters, as well as the graphs of the smoothed ``OD`` and smoothed
+``log(OD)``.
+
+
+.. _fit window:
+
+Fit window
+~~~~~~~~~~
+
+The fit window defines the number of data-points that are included in
+fits locally around a data-point. Such fits are performed when
+determining the :ref:`maximal growth rate <maximal growth rate>` and
+to identify the :ref:`growth yield`.
+
+
+.. _lag at:
+
+Lag at
+~~~~~~
+
+The interception of the exponential function at
+:math:`\mu^\textrm{max}` with this value defines the lag time, see
+:ref:`section about maximal growth rate <maximal growth rate>`.
+
+
+.. _maximal growth cutoff:
+
+Maximal growth cutoff
+~~~~~~~~~~~~~~~~~~~~~
+
+The cutoff values allow to constrain the time of the :ref:`maximal
+growth rate <maximal growth rate>` :math:`\mu^\textrm{max}`. This may
+be especially useful at low OD, as fits of an exponential function
+may be difficult and thus result in noisy estimations of :math:`\mu`
+leading to a false identification of its maximum.
+
+
+
+Special Parameters
+::::::::::::::::::
+
+Two parameters may only be changed when they are not hidden
+(:menuselection:`File --> Settings`). The reason for this is that
+these make the results mathematically less strict, therefore caution
+has to be exercised when changing these.
+
+
+.. _allow at cutoff:
+
+Allow maximal growth at cutoff
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When an :ref:`interval <maximal growth cutoff>` for the maximal growth
+is specified, the location of :math:`\mu^\textrm{max}` must not be at
+the endpoints of the interval, as this would mean a local maximum
+could not be found.
+
+This strict requirement of a local maximum can be loosened by setting
+the parameter ``allow at cutoff``, which mathematically means that
+the derivative to of :math:`\mu` may be non-zero.
+
+
+.. _allow n stderr slope:
+
+Allow growth yield's slope to be zero within n standard errors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The requirement that the slope of a linear regression in a fit-window
+around a data-point is zero within one standard error can be loosened
+to ``n`` standard errors.

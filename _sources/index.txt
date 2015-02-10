@@ -1,0 +1,88 @@
+..
+   Local Variables:
+   ispell-local-dictionary: "en_GB"
+   End:
+
+
+.. toctree::
+   :hidden:
+
+   gatdoc/gatdocumentation
+   catdoc/catdocumentation
+   installation
+   api
+
+
+Growth Analysis Tool (GATHODE) and CLS Analysis Tool (CATHODE)
+**************************************************************
+
+The Growth Analysis Tool for High-throughput Optical Density
+Experiments (GATHODE) is a software package for analysing time series
+of optical density measurements that were recorded with the help of a
+`plate reader <http://en.wikipedia.org/wiki/Plate_reader>`_. It allows
+to extract growth parameters such as maximal growth rate, lag-time and
+growth yield.
+
+The Chronological Life Span is defined as the time cells can survive
+in a non-dividing state. The Chronological life span Analysis Tool for
+High-throughput Optical Density Experiments (CATHODE) uses multiple
+output files of GATHODE to analyse this survival.
+
+
+Both programs consist of the main analysis logic suitable for batch
+processing, and a graphical user interface (GUI) that allows for quick
+inspection of curves, adjustment of parameters and blacklisting of
+outliers. They allow to export the data as figures or tables for
+further processing and analysis.
+
+.. image:: gatdoc/_static/screenshots/gatteaser.*
+   :scale: 37%
+   :alt: Screenshot of GATHODE
+
+.. image:: catdoc/_static/screenshots/catproject.*
+   :scale: 37%
+   :alt: Screenshot of CATHODE
+
+
+License and citation
+********************
+
+Growth Analysis Tool for High-throughput Optical Density Experiments
+(GATHODE) and Chronological life span Analysis Tool for
+High-throughput Optical Density Experiments (CATHODE) are released
+under the terms of the `GNU Affero General Public License
+<_static/LICENSE>`_.
+
+If you use (parts of) this software in your research, we kindly ask
+you to cite our publication *Jung P. P., Christian N., Kay D.,
+Skupin A. and Linster C.L. 2015. Protocols and programs for
+high-throughput growth and aging phenotyping in yeast. Accepted,
+doi:10.1371/journal.pone.0119807*
+
+
+Documentation
+*************
+
+To get started with GATHODE read :ref:`getting started
+<gatgettingstarted>` of the :doc:`documentation
+<gatdoc/gatdocumentation>`.
+
+CATHODE is documented :doc:`here <catdoc/catdocumentation>`.
+
+
+Download
+********
+
+The latest versions of GATHODE and CATHODE for Mac OS/X and Windows
+will soon be made available for download.
+
+To install the software from source check the :doc:`installation
+instructions <installation>`. The source code is hosted at
+`<https://github.com/platereader/gathode>`_.
+
+
+Developing
+**********
+
+If you would like to extend the software or use it in your custom
+workflow, read the :doc:`developer documentation <api>`.

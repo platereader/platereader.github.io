@@ -1,0 +1,111 @@
+..
+   Local Variables:
+   ispell-local-dictionary: "en_GB"
+   End:
+
+Mathematical extraction of properties
+-------------------------------------
+
+In this chapter the mathematical formulas used by GATHODE are
+explained.
+
+Background correction
+~~~~~~~~~~~~~~~~~~~~~
+
+To correct for the optical density of the growth medium, throughout
+the experiment some wells are filled with the pure growth medium
+(i.e. not inoculated with cells). The arithmetic mean of the raw
+readout of the optical density for each point in time, denoted by
+:math:`\rawOdsc{bckgrnd}{condition}{t}`, is used as a background
+reference:
+
+.. math::
+  \rawOdsc{bckgrnd}{condition}{t} = \frac{\sum_{i \in \wells{bckgrnd}{condition})} \rawOd{i}{t}}{|\wells{bckgrnd}{condition}|} \ .
+
+For each well ``i``, the background-corrected optical density is given by
+
+.. math::
+  \odbcsc{i}{condition}{t}=\rawOdsc{i}{condition}{t} - \rawOdsc{bckgrnd}{condition}{t} \ .
+
+
+.. _high density correction:
+
+High density correction
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The high density correction is needed to correct for nonlinearities of
+the background-corrected optical density
+(:math:`\odbcsc{i}{condition}{t}`) versus the real optical density
+(:math:`\odsc{i}{condition}{t}`). This nonlinearity is approximated by
+a cubic formula, for which the three parameters a\ :sub:`1`, a\
+:sub:`2` and a\ :sub:`3` define the coefficients:
+
+.. math::
+  \odsc{i}{condition}{t} = a_1 \odbcsc{i}{condition}{t} +a_2 (\odbcsc{i}{condition}{t})^2 + a_3 (\odbcsc{i}{condition}{t})^3 \ .
+
+
+.. _maximal growth rate:
+
+Maximal growth rate and lag time
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To extract the maximal growth rate, a fit of an exponential function
+to the data is required. Since the data does not exhibit an
+exponential form on a large scale, the fit is performed piecewise for
+small intervals of ``w`` data points (see :ref:`fit window`):
+
+.. math::
+   (\mu_{t+w/2},\odz_{t+w/2})=\argmin_{\mu,\odz} \sum_{t'=t}^{t+w} (\odz e^{\mu T(t')} - \od{}{t'})^2
+
+In principle the maximal growth rate can then be determined as the
+maximal :math:`\mu_t` and the corresponding lag time :math:`\lagt` can
+be calculated as the intersection of the exponential function with the
+value of the :ref:`lag at` parameter. Note that only those values are
+considered for which the :math:`\log(\odbare)` is greater than the
+:ref:`logOD cutoff`.
+
+To mitigate the effect of noisy data, the program requires some criteria
+to be fulfilled:
+
+* :math:`\mumax` must be positive
+* :math:`\odzmax` must be positive
+* the optical density at the time of the maximal growth rate must not
+  be below a given threshold (at low values of optical density the
+  relative level of noise increases, which amplifies for the growth
+  rate)
+
+Further, GATHODE allows to manually adjust the interval within which
+the time of the maximal growth rate should fall (see :ref:`maximal
+growth cutoff`). If such an interval is specified, the location of
+:math:`\mumax` must not be at the endpoints of the interval, as this
+would mean a local maximum could not be found.
+
+This strict requirement of a local maximum can be loosened by setting
+the parameter :ref:`allow at cutoff <allow at cutoff>`, which
+mathematically means that the derivative to of :math:`\mu` may be
+non-zero.
+
+.. _growth yield:
+
+Growth yield
+~~~~~~~~~~~~
+
+The growth yield is determined by performing a linear regression
+within a small :ref:`fit window <fit window>` around each data point
+and finding the maximal :math:`\od{}{}` with a slope that is
+compatible with zero.
+
+To mitigate the effect of noisy data, the linear regression is
+performed on :ref:`smoothed <smoothing>` :math:`\od{}{}` and the
+following criteria need to be fulfilled:
+
+* the optical density of the yield must be larger than the optical
+  density at the maximal linear growth
+* the time of the yield is greater than the time of the maximal slope
+  (note that the maximal slope is not the same as the :ref:`maximal
+  growth rate <maximal growth rate>`)
+* the yield is not negative
+
+The strict requirement of the slope being compatible with zero can be
+loosened by setting the parameter :ref:`allow n standard errors <allow
+n stderr slope>`.

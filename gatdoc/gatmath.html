@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mathematical extraction of properties &mdash; GATHODE | CATHODE  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="GATHODE | CATHODE  documentation" href="../index.html" />
+    <link rel="up" title="GATHODE Documentation" href="gatdocumentation.html" />
+    <link rel="next" title="Parameters" href="gatparameters.html" />
+    <link rel="prev" title="Getting started" href="gatgettingstarted.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          GATHODE | CATHODE</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="gatdocumentation.html">GATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catdoc/catdocumentation.html">CATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installing GATHODE and CATHODE from source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Documentation</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Mathematical extraction of properties</a><ul>
+<li><a class="reference internal" href="#background-correction">Background correction</a></li>
+<li><a class="reference internal" href="#high-density-correction">High density correction</a></li>
+<li><a class="reference internal" href="#maximal-growth-rate-and-lag-time">Maximal growth rate and lag time</a></li>
+<li><a class="reference internal" href="#growth-yield">Growth yield</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="gatgettingstarted.html" title="Previous Chapter: Getting started"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Getting started</span>
+    </a>
+  </li>
+  <li>
+    <a href="gatparameters.html" title="Next Chapter: Parameters"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Parameters &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="mathematical-extraction-of-properties">
+<h1>Mathematical extraction of properties<a class="headerlink" href="#mathematical-extraction-of-properties" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter the mathematical formulas used by GATHODE are
+explained.</p>
+<div class="section" id="background-correction">
+<h2>Background correction<a class="headerlink" href="#background-correction" title="Permalink to this headline">¶</a></h2>
+<p>To correct for the optical density of the growth medium, throughout
+the experiment some wells are filled with the pure growth medium
+(i.e. not inoculated with cells). The arithmetic mean of the raw
+readout of the optical density for each point in time, denoted by
+<img class="math" src="../_images/math/7486ace34da28738e61908996b702f2a92b5f075.png" alt="\rawOdsc{bckgrnd}{condition}{t}"/>, is used as a background
+reference:</p>
+<div class="math">
+<p><img src="../_images/math/a046d1a28ee678606874945c880cb3523004606a.png" alt="\rawOdsc{bckgrnd}{condition}{t} = \frac{\sum_{i \in \wells{bckgrnd}{condition})} \rawOd{i}{t}}{|\wells{bckgrnd}{condition}|} \ ."/></p>
+</div><p>For each well <tt class="docutils literal"><span class="pre">i</span></tt>, the background-corrected optical density is given by</p>
+<div class="math">
+<p><img src="../_images/math/8b82cf17851582a5723fe3894ad137f38c1ca8b1.png" alt="\odbcsc{i}{condition}{t}=\rawOdsc{i}{condition}{t} - \rawOdsc{bckgrnd}{condition}{t} \ ."/></p>
+</div></div>
+<div class="section" id="high-density-correction">
+<span id="id1"></span><h2>High density correction<a class="headerlink" href="#high-density-correction" title="Permalink to this headline">¶</a></h2>
+<p>The high density correction is needed to correct for nonlinearities of
+the background-corrected optical density
+(<img class="math" src="../_images/math/5854a4a55e0d467f79c55e6e183de068dbd460a2.png" alt="\odbcsc{i}{condition}{t}"/>) versus the real optical density
+(<img class="math" src="../_images/math/e352a71914b22e44fad43c0004e08f888f36299a.png" alt="\odsc{i}{condition}{t}"/>). This nonlinearity is approximated by
+a cubic formula, for which the three parameters a<sub>1</sub>, a<sub>2</sub> and a<sub>3</sub> define the coefficients:</p>
+<div class="math">
+<p><img src="../_images/math/5f052975d47897a6a4881cee3b5e81fabf10d197.png" alt="\odsc{i}{condition}{t} = a_1 \odbcsc{i}{condition}{t} +a_2 (\odbcsc{i}{condition}{t})^2 + a_3 (\odbcsc{i}{condition}{t})^3 \ ."/></p>
+</div></div>
+<div class="section" id="maximal-growth-rate-and-lag-time">
+<span id="maximal-growth-rate"></span><h2>Maximal growth rate and lag time<a class="headerlink" href="#maximal-growth-rate-and-lag-time" title="Permalink to this headline">¶</a></h2>
+<p>To extract the maximal growth rate, a fit of an exponential function
+to the data is required. Since the data does not exhibit an
+exponential form on a large scale, the fit is performed piecewise for
+small intervals of <tt class="docutils literal"><span class="pre">w</span></tt> data points (see <a class="reference internal" href="gatparameters.html#fit-window"><em>Fit window</em></a>):</p>
+<div class="math">
+<p><img src="../_images/math/1664a8cf34a8c1599795a5a40059dfe130e6dbf8.png" alt="(\mu_{t+w/2},\odz_{t+w/2})=\argmin_{\mu,\odz} \sum_{t'=t}^{t+w} (\odz e^{\mu T(t')} - \od{}{t'})^2"/></p>
+</div><p>In principle the maximal growth rate can then be determined as the
+maximal <img class="math" src="../_images/math/2f9e4510130fedb42dca7d5e1bb137f0e39df777.png" alt="\mu_t"/> and the corresponding lag time <img class="math" src="../_images/math/61036661be3ec1e1210d1055a34966c1979438ac.png" alt="\lagt"/> can
+be calculated as the intersection of the exponential function with the
+value of the <a class="reference internal" href="gatparameters.html#lag-at"><em>Lag at</em></a> parameter. Note that only those values are
+considered for which the <img class="math" src="../_images/math/b7ff910bc72230ffbd1fe2ad0a1f9dbc5696c23a.png" alt="\log(\odbare)"/> is greater than the
+<a class="reference internal" href="gatparameters.html#logod-cutoff"><em>log(OD) cutoff</em></a>.</p>
+<p>To mitigate the effect of noisy data, the program requires some criteria
+to be fulfilled:</p>
+<ul class="simple">
+<li><img class="math" src="../_images/math/5d1fe757850074f6ee369f46fffd0d62b4cf845a.png" alt="\mumax"/> must be positive</li>
+<li><img class="math" src="../_images/math/f1a1079635019906a3a4ac309b27d5d27eec6d75.png" alt="\odzmax"/> must be positive</li>
+<li>the optical density at the time of the maximal growth rate must not
+be below a given threshold (at low values of optical density the
+relative level of noise increases, which amplifies for the growth
+rate)</li>
+</ul>
+<p>Further, GATHODE allows to manually adjust the interval within which
+the time of the maximal growth rate should fall (see <a class="reference internal" href="gatparameters.html#maximal-growth-cutoff"><em>Maximal growth cutoff</em></a>). If such an interval is specified, the location of
+<img class="math" src="../_images/math/5d1fe757850074f6ee369f46fffd0d62b4cf845a.png" alt="\mumax"/> must not be at the endpoints of the interval, as this
+would mean a local maximum could not be found.</p>
+<p>This strict requirement of a local maximum can be loosened by setting
+the parameter <a class="reference internal" href="gatparameters.html#allow-at-cutoff"><em>allow at cutoff</em></a>, which
+mathematically means that the derivative to of <img class="math" src="../_images/math/2d8c833ed800824727cd7bd2fb9de1a12ad7e674.png" alt="\mu"/> may be
+non-zero.</p>
+</div>
+<div class="section" id="growth-yield">
+<span id="id2"></span><h2>Growth yield<a class="headerlink" href="#growth-yield" title="Permalink to this headline">¶</a></h2>
+<p>The growth yield is determined by performing a linear regression
+within a small <a class="reference internal" href="gatparameters.html#fit-window"><em>fit window</em></a> around each data point
+and finding the maximal <img class="math" src="../_images/math/f20cb588ff28f3ef5426eac7815a66ee119954dc.png" alt="\od{}{}"/> with a slope that is
+compatible with zero.</p>
+<p>To mitigate the effect of noisy data, the linear regression is
+performed on <a class="reference internal" href="gatparameters.html#smoothing"><em>smoothed</em></a> <img class="math" src="../_images/math/f20cb588ff28f3ef5426eac7815a66ee119954dc.png" alt="\od{}{}"/> and the
+following criteria need to be fulfilled:</p>
+<ul class="simple">
+<li>the optical density of the yield must be larger than the optical
+density at the maximal linear growth</li>
+<li>the time of the yield is greater than the time of the maximal slope
+(note that the maximal slope is not the same as the <a class="reference internal" href="#maximal-growth-rate"><em>maximal
+growth rate</em></a>)</li>
+<li>the yield is not negative</li>
+</ul>
+<p>The strict requirement of the slope being compatible with zero can be
+loosened by setting the parameter <a class="reference internal" href="gatparameters.html#allow-n-stderr-slope"><em>allow n standard errors</em></a>.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014-2015, Nils Christian.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

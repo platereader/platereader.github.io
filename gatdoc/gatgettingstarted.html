@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting started &mdash; GATHODE | CATHODE  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="GATHODE | CATHODE  documentation" href="../index.html" />
+    <link rel="up" title="GATHODE Documentation" href="gatdocumentation.html" />
+    <link rel="next" title="Mathematical extraction of properties" href="gatmath.html" />
+    <link rel="prev" title="GATHODE Documentation" href="gatdocumentation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          GATHODE | CATHODE</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="gatdocumentation.html">GATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catdoc/catdocumentation.html">CATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installing GATHODE and CATHODE from source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Documentation</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Getting started</a><ul>
+<li><a class="reference internal" href="#plan-run-and-export-plate-reader-experiment">Plan, run and export plate reader experiment</a><ul>
+<li><a class="reference internal" href="#tecan">TECAN</a></li>
+<li><a class="reference internal" href="#bioscreen-c">Bioscreen C</a></li>
+<li><a class="reference internal" href="#other-platereaders">Other platereaders</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-gathode">Use GATHODE</a><ul>
+<li><a class="reference internal" href="#adjust-labels">Adjust labels</a></li>
+<li><a class="reference internal" href="#analyse-data">Analyse data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="gatdocumentation.html" title="Previous Chapter: GATHODE Documentation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; GATHODE Document...</span>
+    </a>
+  </li>
+  <li>
+    <a href="gatmath.html" title="Next Chapter: Mathematical extraction of properties"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Mathematical ext... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="getting-started">
+<span id="gatgettingstarted"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter we describe how to get started with the Growth
+Analysis Tool for High-throughput Optical Density Experiments
+(GATHODE).</p>
+<div class="section" id="plan-run-and-export-plate-reader-experiment">
+<h2>Plan, run and export plate reader experiment<a class="headerlink" href="#plan-run-and-export-plate-reader-experiment" title="Permalink to this headline">¶</a></h2>
+<p>First of all, when planning the experiment with your plate reader, you
+should label the individual wells according to the scheme
+<tt class="samp docutils literal"><em><span class="pre">sample</span></em><span class="pre">_</span><em><span class="pre">condition</span></em></tt> (note the underscore <tt class="docutils literal"><span class="pre">_</span></tt>), where
+replicates should contain exactly the same labels. This way GATHODE
+will later be able to automatically group replicates in order to
+extract the mean and variance of various properties (e.g. maximal
+growth rate). You should also label the empty wells, used to subtract
+the background optical density (OD) from the samples&#8217; OD, according to
+the scheme <tt class="samp docutils literal"><span class="pre">background_</span><em><span class="pre">condition</span></em></tt>.</p>
+<p>Example: Assume you are growing the yeast strains FY4, W303-1A and
+Sigma1278b under two conditions, <cite>minimal</cite> (YNB) and <cite>rich</cite> (YPD)
+media, then the labelling could look like this</p>
+<ul class="simple">
+<li>FY4_YNB</li>
+<li>FY4_YPD</li>
+<li>W303-1A_YNB</li>
+<li>W303-1A_YPD</li>
+<li>Sigma1278b_YNB</li>
+<li>Sigma1278b_YPD</li>
+<li>background_YNB</li>
+<li>background_YPD</li>
+</ul>
+<p>with each of this being present multiple times, corresponding to the
+number of replicates. If your platereader software does not support
+labelling of wells you can adjust these later using GATHODE.</p>
+<p>After finishing your experiment with the plate reader, export the data.</p>
+<div class="section" id="tecan">
+<h3>TECAN<a class="headerlink" href="#tecan" title="Permalink to this headline">¶</a></h3>
+<p>Export the in ASCII format (<em class="menuselection">Data Handling -&gt; Data
+export -&gt; Export to ASCII file...</em>). Make sure to use the export
+options <em>Direction: Horizontal</em>, <em>Result: Table (well data in
+columns), Add kinetic time stamps</em>.</p>
+<a class="reference internal image-reference" href="../_images/tecanExportOptions.png"><img alt="TECAN export" src="../_images/tecanExportOptions.png" style="width: 572.8px; height: 334.08px;" /></a>
+<p>Use the <em>Point</em> as <em>Decimal character</em> and <em>Tab</em> as <em>Delimiter</em> in the
+second option window.</p>
+<a class="reference internal image-reference" href="../_images/tecanAsciiOptions.png"><img alt="TECAN export" src="../_images/tecanAsciiOptions.png" style="width: 575.28px; height: 325.72px;" /></a>
+</div>
+<div class="section" id="bioscreen-c">
+<h3>Bioscreen C<a class="headerlink" href="#bioscreen-c" title="Permalink to this headline">¶</a></h3>
+<p>Export the data as plain text. <tt class="samp docutils literal"><em><span class="pre">sample</span></em></tt> and
+<tt class="samp docutils literal"><em><span class="pre">condition</span></em></tt> labels can be adjusted after importing the data
+into GATHODE.</p>
+<p>(More detailed instructions will be added to this section once we get
+access to a Bioscreen C platereader.)</p>
+</div>
+<div class="section" id="other-platereaders">
+<h3>Other platereaders<a class="headerlink" href="#other-platereaders" title="Permalink to this headline">¶</a></h3>
+<p>If you have access to a different platereader, we would be happy if
+you could provide us with the files that can be exported by the
+accompanying software. We will then be able to write an import
+function for GATHODE and adjust this documentation. For further
+information contact the <a class="reference external" href="mailto:nils&#46;christian&#37;&#52;&#48;uni&#46;lu">developer</a>.</p>
+</div>
+</div>
+<div class="section" id="use-gathode">
+<h2>Use GATHODE<a class="headerlink" href="#use-gathode" title="Permalink to this headline">¶</a></h2>
+<p>Start GATHODE and open the file exported from the platereader
+(<em class="menuselection">File ‣ Open</em>). Note that it is not necessary to run
+GATHODE on the same computer as the plate reader software, any modern
+computer should be able to run GATHODE.</p>
+<a class="reference internal image-reference" href="../_images/gatopen.png"><img alt="Open Dialog" src="../_images/gatopen.png" style="width: 575.97px; height: 341.64px;" /></a>
+<div class="section" id="adjust-labels">
+<span id="gatmetadata"></span><h3>Adjust labels<a class="headerlink" href="#adjust-labels" title="Permalink to this headline">¶</a></h3>
+<p>In case your platereader does not support assigning labels to the
+wells or you want to change the labels, you can do this by selecting
+<em class="menuselection">File ‣ Save metadata</em>. You will be prompted for a
+file name to save the currently existing metadata
+(i.e. <tt class="samp docutils literal"><em><span class="pre">sample</span></em></tt> and <tt class="samp docutils literal"><em><span class="pre">condition</span></em></tt>). You can then edit the
+metadata in a spreadsheet editor (e.g <cite>LibreOffice Calc</cite> or <cite>Microsoft
+Excel</cite>), where the spreadsheet layout mimics the layout of the
+plate. After saving your changes to the spreadsheet (make sure you
+save the data in the <cite>CSV</cite>-format), you can import the metadata by
+selecting <em class="menuselection">File ‣ Load metadata</em>.</p>
+</div>
+<div class="section" id="analyse-data">
+<h3>Analyse data<a class="headerlink" href="#analyse-data" title="Permalink to this headline">¶</a></h3>
+<p>Once the data is loaded, the replicates are grouped according to the
+scheme mentioned above, with the background OD for the corresponding
+condition automatically subtracted. You will see an overview figure of
+all optical density time series, and on the left of the main window
+you are able to choose the replicates of the different
+sample-condition pairs from a list.</p>
+<a class="reference internal image-reference" href="../_images/gatoverview.png"><img alt="Overview after opening a file" src="../_images/gatoverview.png" style="width: 578.7px; height: 353.7px;" /></a>
+<p>The extraction of properties depends on certain parameters. In
+GATHODE, some parameters are defined for the whole plate (such as the
+high density correction coefficients or the fit-window size), whereas
+other parameters can have plate-wide defaults which can be overridden
+for each replicate or even each single well (examples are the cutoff
+values for the maximal growth rate). The plate-wide parameters can
+only be edited if no replicate or single well is selected. For more
+details on setting parameters have a look at the corresponding chapter
+in the <a class="reference internal" href="gatparameters.html#changing-parameters"><em>documentation</em></a>.</p>
+<p>Once the parameters are adjusted, you can browse through the
+replicates by clicking on the entries in the list, and by clicking on
+the arrow next to a sample you can expand the list to see each
+individual well. In the expanded list you can deselect certain wells
+to mark them as outliers and exclude them from the calculations of
+replicate properties.</p>
+<a class="reference internal image-reference" href="../_images/gattreeview.png"><img alt="Treeview of replicates" src="../_images/gattreeview.png" style="width: 226.0px; height: 165.0px;" /></a>
+<p>To save the data together with the parameters, select
+<em class="menuselection">File ‣ Save As</em>.  Similarly, the data can be loaded
+(<em class="menuselection">File ‣ Open</em>), allowing for persistence and
+reproducibility of the analysis.</p>
+<p>You may save the figures in PDF format (<em class="menuselection">File ‣
+Export figure</em>), or you may save all the extracted properties such as
+maximal growth rate, yield and lag time as comma-separated values
+(<em class="menuselection">File ‣ Export properties</em>) suitable for further
+processing in other programs like R or your favourite Office-Suite.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014-2015, Nils Christian.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

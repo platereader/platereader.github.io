@@ -1,0 +1,41 @@
+..
+   Local Variables:
+   ispell-local-dictionary: "en_GB"
+   End:
+
+API Documentation
+*****************
+
+GATHODE
+-------
+
+.. autoclass:: platereader.plate.Plate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: platereader.replicate.Replicate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+CATHODE
+-------
+
+.. autoclass:: platereader.cls.Cls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoclass:: platereader.clsreplicate.ClsReplicate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+StatusMessage
+-------------
+
+.. autoclass:: platereader.statusmessage.StatusMessage
+   :members:
+   :undoc-members:
+   :show-inheritance:

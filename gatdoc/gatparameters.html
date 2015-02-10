@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parameters &mdash; GATHODE | CATHODE  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="GATHODE | CATHODE  documentation" href="../index.html" />
+    <link rel="up" title="GATHODE Documentation" href="gatdocumentation.html" />
+    <link rel="next" title="CATHODE Documentation" href="../catdoc/catdocumentation.html" />
+    <link rel="prev" title="Mathematical extraction of properties" href="gatmath.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          GATHODE | CATHODE</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="gatdocumentation.html">GATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catdoc/catdocumentation.html">CATHODE Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installing GATHODE and CATHODE from source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Documentation</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Parameters</a><ul>
+<li><a class="reference internal" href="#changing-parameters">Changing parameters</a></li>
+<li><a class="reference internal" href="#parameter-descriptions">Parameter descriptions</a><ul>
+<li><a class="reference internal" href="#normal-parameters">Normal Parameters</a><ul>
+<li><a class="reference internal" href="#high-density-correction">High density correction</a></li>
+<li><a class="reference internal" href="#log-od-cutoff"><tt class="docutils literal"><span class="pre">log(OD)</span></tt> cutoff</a></li>
+<li><a class="reference internal" href="#smoothing">Smoothing</a></li>
+<li><a class="reference internal" href="#fit-window">Fit window</a></li>
+<li><a class="reference internal" href="#lag-at">Lag at</a></li>
+<li><a class="reference internal" href="#maximal-growth-cutoff">Maximal growth cutoff</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#special-parameters">Special Parameters</a><ul>
+<li><a class="reference internal" href="#allow-maximal-growth-at-cutoff">Allow maximal growth at cutoff</a></li>
+<li><a class="reference internal" href="#allow-growth-yield-s-slope-to-be-zero-within-n-standard-errors">Allow growth yield&#8217;s slope to be zero within n standard errors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="gatmath.html" title="Previous Chapter: Mathematical extraction of properties"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Mathematical ext...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../catdoc/catdocumentation.html" title="Next Chapter: CATHODE Documentation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">CATHODE Document... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="parameters">
+<span id="gat-parameters"></span><h1>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter we describe how parameters are handled in GATHODE,
+which parameters exist and which properties they influence.</p>
+<div class="section" id="changing-parameters">
+<span id="id1"></span><h2>Changing parameters<a class="headerlink" href="#changing-parameters" title="Permalink to this headline">¶</a></h2>
+<p>In GATHODE, the extraction of properties (such as maximal growth rate,
+growth yield, etc.) depends on certain parameters.</p>
+<p>Some parameters are defined for the whole plate, whereas other
+parameters can have plate-wide defaults which can be overridden for
+each replicate group or even each single well.</p>
+<p>To change a plate parameter or a plate default parameter, make sure no
+replicate is selected from the list. Parameters which have been
+explicitly set have a white background, parameters without a value
+have a grey background. In the following screenshot, the lower cutoff
+of the maximal growth is set while the upper cutoff of the maximal
+growth values is unset.</p>
+<a class="reference internal image-reference" href="../_images/gatdefaultparameters.png"><img alt="Plate default parameters" src="../_images/gatdefaultparameters.png" style="width: 159.0px; height: 57.0px;" /></a>
+<p>Parameters can also be set for a single <tt class="samp docutils literal"><em><span class="pre">sample</span></em><span class="pre">_</span><em><span class="pre">condition</span></em></tt>
+replicate group, or even for a single well. Parameters are inherited from
+plate to replicate group and from replicate group to single well. Parameters
+inherited from the plate that are not changed by any of the <em>child</em>
+wells (wells constituting the replicate group) have a grey background,
+parameters explicitly set without a change in its <em>child</em> wells have a
+white background. Parameters that are modified in at least one of the
+underlying single wells but are otherwise set to the plate-wide
+default change their background colour from grey to white from top to
+bottom. In contrast, the background of parameters that are explicitly
+set and at least one of the underlying single wells has a modified
+value, change from grey to white from left to right. In the screenshot
+below, the lower cutoff for the maximal growth rate is explicitly
+changed for the selected replicate group, and in at least one of its <em>child</em>
+wells the value is changed further. The value of the upper cutoff is
+not changed for this replicate group, but one of the <em>child</em> wells has a
+differing value.</p>
+<a class="reference internal image-reference" href="../_images/gatreplicateparameters.png"><img alt="Replicate parameters" src="../_images/gatreplicateparameters.png" style="width: 158.0px; height: 56.0px;" /></a>
+</div>
+<div class="section" id="parameter-descriptions">
+<h2>Parameter descriptions<a class="headerlink" href="#parameter-descriptions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="normal-parameters">
+<h3>Normal Parameters<a class="headerlink" href="#normal-parameters" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="high-density-correction">
+<span id="high-density-correction-parameters"></span><h4>High density correction<a class="headerlink" href="#high-density-correction" title="Permalink to this headline">¶</a></h4>
+<p>The optical density at high values is corrected by a cubic function
+whose parameters are the three coefficients a<sub>1</sub>, a<sub>2</sub>
+and a<sub>3</sub>. For details see <a class="reference internal" href="gatmath.html#high-density-correction"><em>High density correction</em></a>.</p>
+</div>
+<div class="section" id="log-od-cutoff">
+<span id="logod-cutoff"></span><h4><tt class="docutils literal"><span class="pre">log(OD)</span></tt> cutoff<a class="headerlink" href="#log-od-cutoff" title="Permalink to this headline">¶</a></h4>
+<p>Allows to restrain the detection of all properties to locations where
+the value of <img class="math" src="../_images/math/dbc86724b0f75c3f6ee97128ca8f68defc6c18b0.png" alt="\log{\textrm{OD}}"/> is above this cutoff. This can
+ensure that the noise at low OD does not hamper the detection
+algorithms. Further, all figures use this as the lower value of the
+OD-range in the log-scale.</p>
+</div>
+<div class="section" id="smoothing">
+<span id="id2"></span><h4>Smoothing<a class="headerlink" href="#smoothing" title="Permalink to this headline">¶</a></h4>
+<p>To obtain a smoother curve of the optical density, it can be
+preprocessed by a smoothing spline. In GATHODE the function
+<a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.UnivariateSpline.html">UnivariateSpline</a>
+from the <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/">SciPy</a> library
+is used for this and the two parameters <tt class="docutils literal"><span class="pre">k</span></tt> and <tt class="docutils literal"><span class="pre">s</span></tt> correspond to
+the degree of the smoothing spline and the smoothing factor,
+respectively.</p>
+<p>The outcome of the <a class="reference internal" href="gatmath.html#growth-yield"><em>Growth yield</em></a> is influenced by these
+parameters, as well as the graphs of the smoothed <tt class="docutils literal"><span class="pre">OD</span></tt> and smoothed
+<tt class="docutils literal"><span class="pre">log(OD)</span></tt>.</p>
+</div>
+<div class="section" id="fit-window">
+<span id="id3"></span><h4>Fit window<a class="headerlink" href="#fit-window" title="Permalink to this headline">¶</a></h4>
+<p>The fit window defines the number of data-points that are included in
+fits locally around a data-point. Such fits are performed when
+determining the <a class="reference internal" href="gatmath.html#maximal-growth-rate"><em>maximal growth rate</em></a> and
+to identify the <a class="reference internal" href="gatmath.html#growth-yield"><em>Growth yield</em></a>.</p>
+</div>
+<div class="section" id="lag-at">
+<span id="id4"></span><h4>Lag at<a class="headerlink" href="#lag-at" title="Permalink to this headline">¶</a></h4>
+<p>The interception of the exponential function at
+<img class="math" src="../_images/math/7f3785b8340add594f1765f8daba4b25e5e2d20e.png" alt="\mu^\textrm{max}"/> with this value defines the lag time, see
+<a class="reference internal" href="gatmath.html#maximal-growth-rate"><em>section about maximal growth rate</em></a>.</p>
+</div>
+<div class="section" id="maximal-growth-cutoff">
+<span id="id5"></span><h4>Maximal growth cutoff<a class="headerlink" href="#maximal-growth-cutoff" title="Permalink to this headline">¶</a></h4>
+<p>The cutoff values allow to constrain the time of the <a class="reference internal" href="gatmath.html#maximal-growth-rate"><em>maximal
+growth rate</em></a> <img class="math" src="../_images/math/7f3785b8340add594f1765f8daba4b25e5e2d20e.png" alt="\mu^\textrm{max}"/>. This may
+be especially useful at low OD, as fits of an exponential function
+may be difficult and thus result in noisy estimations of <img class="math" src="../_images/math/2d8c833ed800824727cd7bd2fb9de1a12ad7e674.png" alt="\mu"/>
+leading to a false identification of its maximum.</p>
+</div>
+</div>
+<div class="section" id="special-parameters">
+<h3>Special Parameters<a class="headerlink" href="#special-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Two parameters may only be changed when they are not hidden
+(<em class="menuselection">File ‣ Settings</em>). The reason for this is that
+these make the results mathematically less strict, therefore caution
+has to be exercised when changing these.</p>
+<div class="section" id="allow-maximal-growth-at-cutoff">
+<span id="allow-at-cutoff"></span><h4>Allow maximal growth at cutoff<a class="headerlink" href="#allow-maximal-growth-at-cutoff" title="Permalink to this headline">¶</a></h4>
+<p>When an <a class="reference internal" href="#maximal-growth-cutoff"><em>interval</em></a> for the maximal growth
+is specified, the location of <img class="math" src="../_images/math/7f3785b8340add594f1765f8daba4b25e5e2d20e.png" alt="\mu^\textrm{max}"/> must not be at
+the endpoints of the interval, as this would mean a local maximum
+could not be found.</p>
+<p>This strict requirement of a local maximum can be loosened by setting
+the parameter <tt class="docutils literal"><span class="pre">allow</span> <span class="pre">at</span> <span class="pre">cutoff</span></tt>, which mathematically means that
+the derivative to of <img class="math" src="../_images/math/2d8c833ed800824727cd7bd2fb9de1a12ad7e674.png" alt="\mu"/> may be non-zero.</p>
+</div>
+<div class="section" id="allow-growth-yield-s-slope-to-be-zero-within-n-standard-errors">
+<span id="allow-n-stderr-slope"></span><h4>Allow growth yield&#8217;s slope to be zero within n standard errors<a class="headerlink" href="#allow-growth-yield-s-slope-to-be-zero-within-n-standard-errors" title="Permalink to this headline">¶</a></h4>
+<p>The requirement that the slope of a linear regression in a fit-window
+around a data-point is zero within one standard error can be loosened
+to <tt class="docutils literal"><span class="pre">n</span></tt> standard errors.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014-2015, Nils Christian.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
